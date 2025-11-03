@@ -25,8 +25,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity;            // para gravedad
 
     // Hash para parámetros del Animator (evita typos y es más rápido)
-    //private static readonly int VelX = Animator.StringToHash("velX");
-    //private static readonly int VelY = Animator.StringToHash("velY");
+    private static readonly int VelX = Animator.StringToHash("velX");
+    private static readonly int VelY = Animator.StringToHash("velY");
 
     // Suavizado para el Blend Tree
     [SerializeField] private float animDamp = 0.05f;
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     // ====== NUEVO INPUT SYSTEM ======
@@ -95,10 +95,10 @@ public class PlayerMovement : MonoBehaviour
         // 5) Enviar parámetros al Animator (Blend Tree 2D Freeform: velX, velY)
         // velX/velY en el BlendTree deben ser el input local (x,y) del jugador.
         // Usamos damping para que el punto rojo del Blend Tree se mueva suave.
-        //velXCur = Mathf.SmoothDamp(velXCur, moveInput.x, ref velXCur, animDamp);
-        //velYCur = Mathf.SmoothDamp(velYCur, moveInput.y, ref velYCur, animDamp);
-        //anim.SetFloat(VelX, velXCur);
-        //anim.SetFloat(VelY, velYCur);
+        velXCur = Mathf.SmoothDamp(velXCur, moveInput.x, ref velXCur, animDamp);
+        velYCur = Mathf.SmoothDamp(velYCur, moveInput.y, ref velYCur, animDamp);
+        anim.SetFloat(VelX, velXCur);
+        anim.SetFloat(VelY, velYCur);
     }
 }
 
