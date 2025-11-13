@@ -49,7 +49,7 @@ public class ShootWithRaycast : MonoBehaviour
 
     IEnumerator ShootRayColor(Color color)
     {
-        Vector3 direction = transform.up; // dirección eje verde (Z local)
+        Vector3 direction = transform.TransformDirection(Vector3.up); // dirección eje verde (Z local)
         Ray ray = new Ray(transform.position, direction);
         RaycastHit hit;
 
@@ -75,7 +75,7 @@ public class ShootWithRaycast : MonoBehaviour
             yield return new WaitForSeconds(tiempoCambioTurno);
 
             opcionActiva = opcionActiva == Opcion.Opcion1 ? Opcion.Opcion2 : Opcion.Opcion1;
-            Debug.Log($"Turno global cambiado a: {opcionActiva}");
+            //Debug.Log($"Turno global cambiado a: {opcionActiva}");
         }
     }
 }
