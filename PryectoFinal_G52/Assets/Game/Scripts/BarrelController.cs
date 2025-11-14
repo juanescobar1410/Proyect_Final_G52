@@ -92,11 +92,20 @@ public class BarrelController : MonoBehaviour
     private Vector3 moveDirection;
     private bool isMoving = false;
 
+    private Rigidbody rb;
+
+    void Awake()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
     void Update()
     {
+        // Tu código tal cual
         if (isMoving)
         {
-            transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+            // Eliminamos el Translate (para que no se “pegue” en Z)
+            // transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
 
             // Si sale del área, reaparece
             if (Mathf.Abs(transform.position.x) > boundaryLimit ||
@@ -108,8 +117,18 @@ public class BarrelController : MonoBehaviour
         }
     }
 
+    void FixedUpdate()
+    {
+        // NUEVO: Velocidad constante y suave con Rigidbody
+        if (isMoving)
+        {
+            rb.linearVelocity = moveDirection * moveSpeed;
+        }
+    }
+
     public void MoveInDirection(BookController.Direction dir)
     {
+        // Tu código tal cual
         switch (dir)
         {
             case BookController.Direction.Norte:
@@ -132,14 +151,20 @@ public class BarrelController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        // Detiene el movimiento al chocar con algo
+        // Tu código tal cual
         Debug.Log($"El barril chocó con {collision.gameObject.name}");
         isMoving = false;
+
+        // NUEVO: Detener rigidbody cuando se choca
+        rb.linearVelocity = Vector3.zero;
     }
 
     void ResetPosition()
     {
         transform.position = resetPosition;
         isMoving = false;
+
+        // NUEVO: Resetear velocidad
+        rb.linearVelocity = Vector3.zero;
     }
 }
