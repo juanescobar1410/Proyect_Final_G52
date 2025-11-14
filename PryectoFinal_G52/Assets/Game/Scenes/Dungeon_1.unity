@@ -262,13 +262,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arissa
       objectReference: {fileID: 0}
+    - target: {fileID: 5056085696592425477, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 5575741711375886527, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
       propertyPath: m_LocalPosition.x
       value: -25.582792
       objectReference: {fileID: 0}
     - target: {fileID: 5575741711375886527, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 5575741711375886527, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13298,7 +13302,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
       propertyPath: m_Name
-      value: Yaku J Ignite
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
       propertyPath: m_Controller
@@ -13310,39 +13314,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 674280402}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 674280405}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 674280406}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 674280407}
   m_SourcePrefab: {fileID: 100100000, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
 --- !u!1 &674280401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b344ce7826f0424dbd0086293ed5cc3, type: 3}
   m_PrefabInstance: {fileID: 674280400}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &674280402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674280401}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7c31cb81c9eee84cb6bb70180a7deca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: "Assembly-CSharp::Enemies\xE7"
-  rutina: 0
-  cronometro: 0
-  ani: {fileID: 0}
-  angulo: {x: 0, y: 0, z: 0, w: 0}
-  grado: 0
-  speed: 1
-  distanciaDeteccion: 0.7
-  velocidadRotacion: 1
 --- !u!65 &674280405
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13391,6 +13375,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &674280407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674280401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7c31cb81c9eee84cb6bb70180a7deca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  rutina: 0
+  cronometro: 0
+  ani: {fileID: 0}
+  angulo: {x: 0, y: 0, z: 0, w: 0}
+  grado: 0
+  target: {fileID: 0}
 --- !u!1001 &674759653
 PrefabInstance:
   m_ObjectHideFlags: 0
