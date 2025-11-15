@@ -318,6 +318,34 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7084595028055840833, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084595028055840833, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084595028055840833, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2014982345}
+    - target: {fileID: 7084595028055840833, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084595028055840833, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnJump
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084595028055840833, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMovementDebug, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7084595028055840833, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8030075752786999736, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
     m_RemovedGameObjects:
@@ -43587,6 +43615,17 @@ MonoBehaviour:
   playerBody: {fileID: 2014982342}
   orbitSensitivity: 500
   orbitDistance: 5
+--- !u!114 &2014982345 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6058850389204941437, guid: 9e39cf980591f2c44b2bfe5491d4f370, type: 3}
+  m_PrefabInstance: {fileID: 13900108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014982336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a4a0e9513380584ea11c596d33e2036, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1001 &2019581433
 PrefabInstance:
   m_ObjectHideFlags: 0

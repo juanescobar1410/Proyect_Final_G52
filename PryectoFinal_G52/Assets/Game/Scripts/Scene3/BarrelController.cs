@@ -181,20 +181,23 @@ public class BarrelController : MonoBehaviour
 {
     [Header("Movimiento del barril")]
     public float moveSpeed = 5f;
-    public Vector3 resetPosition = new Vector3(0, 1, 0);
+
+    [Tooltip("Punto donde reaparecerá el barril")]
+    public Transform resetPoint;   // 🔹 Nuevo: puedes asignar un GameObject aquí
+
     public float boundaryLimit = 50f;
 
     private Vector3 moveDirection;
     private bool isMoving = false;
 
     [Header("Detección de pared")]
-    public float detectionDistance = 0.6f; // Distancia corta para parar antes de chocar
+    public float detectionDistance = 0.6f;
 
     void Update()
     {
         if (isMoving)
         {
-            // 👉 Lanzamos un raycast al frente
+            // 👉 Raycast al frente
             if (Physics.Raycast(transform.position, moveDirection, detectionDistance))
             {
                 Debug.Log("Pared detectada. Parando barril.");
@@ -202,7 +205,7 @@ public class BarrelController : MonoBehaviour
                 return;
             }
 
-            // Movimiento suave continuo
+            // Movimiento continuo
             transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
 
             // Límite del área
@@ -239,7 +242,15 @@ public class BarrelController : MonoBehaviour
 
     void ResetPosition()
     {
-        transform.position = resetPosition;
+        if (resetPoint != null)
+        {
+            transform.position = resetPoint.position;
+        }
+        else
+        {
+            Debug.LogWarning(" No se asignó un Reset Point en el barril.");
+        }
+
         isMoving = false;
     }
 }
