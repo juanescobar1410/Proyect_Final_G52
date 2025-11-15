@@ -20,7 +20,7 @@ public class HitBoos : MonoBehaviour
     {
         if (coll.CompareTag("Player"))
         {
-            //coll.GetComponent<PlayerHealth>().TakeDamage(damage);
+            coll.GetComponent<Player3D>().HP_Min -= damage;
         }
     }
 }

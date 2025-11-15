@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment_Light.fbx.meta
 guid: d9ad0f74d68824711bc800186cf63d22
+========
+guid: 8a441ee566d1d434393bd2074f4a1745
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Models/Player/Arissa.fbx.meta
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -29,7 +33,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -86,11 +90,24 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment_Light.fbx.meta
     hasExtraRoot: 0
     skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
+========
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Models/Player/Arissa.fbx.meta
   additionalBone: 0
   userData: 
   assetBundleName: 

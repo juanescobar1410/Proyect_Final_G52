@@ -123,7 +123,7 @@ public class Boss : MonoBehaviour
                         anim.SetBool("walk", false);
                         anim.SetBool("run", false);
                         anim.SetBool("attack", true);
-                        anim.SetFloat("skills", 0);
+                        anim.SetFloat("skills", 0.4f);
                         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
                         rango.GetComponent<CapsuleCollider>().enabled = false;
                         break;
@@ -136,7 +136,7 @@ public class Boss : MonoBehaviour
                             anim.SetBool("walk", false);
                             anim.SetBool("run", false);
                             anim.SetBool("attack", true);
-                            anim.SetFloat("skills", 0);
+                            anim.SetFloat("skills", 1f);
                             hit_select = 3;
                             rango.GetComponent<CapsuleCollider>().enabled = false;
 
@@ -164,7 +164,7 @@ public class Boss : MonoBehaviour
                             anim.SetBool("walk", false);
                             anim.SetBool("run", false);
                             anim.SetBool("attack", true);
-                            anim.SetFloat("skills", 0);
+                            anim.SetFloat("skills", 0.6f);
                             rango.GetComponent<CapsuleCollider>().enabled = false;
                             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 0.5f);
                         }
