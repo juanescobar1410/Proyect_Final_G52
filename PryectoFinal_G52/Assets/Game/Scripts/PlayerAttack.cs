@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Animator animator;
-    public GameObject swordHitbox; 
+    public GameObject swordHitbox;
 
     private bool isAttacking = false;
 
@@ -27,5 +27,13 @@ public class PlayerAttack : MonoBehaviour
     {
         swordHitbox.SetActive(false);
         isAttacking = false;
+    }
+
+    private void OnTriggerEnter(Collider coll)
+    {
+        if(coll.CompareTag("Puño"))
+        {
+            print("Daño");
+        }
     }
 }
