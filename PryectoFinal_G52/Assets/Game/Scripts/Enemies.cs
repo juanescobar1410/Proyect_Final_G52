@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,12 +11,14 @@ public class Enemigo1: MonoBehaviour
     public float grado;
 
     public GameObject target;
+    public bool atacando;
     void Start()
     {
         ani = GetComponent<Animator>();
         target = GameObject.Find("Arissa");
 
     }
+
 
     public void Comportamiento_Enemigo()
     {
@@ -54,15 +56,37 @@ public class Enemigo1: MonoBehaviour
         }
         else
         {
-            var lookPos = target.transform.position - transform.position;
-            lookPos.y = 0;
-            var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
-            ani.SetBool("walk", false);
+            if (Vector3.Distance(transform.position, target.transform.position) > 1 && !atacando)
+            {
 
-            ani.SetBool("run", true);
-            transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+                var lookPos = target.transform.position - transform.position;
+                lookPos.y = 0;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
+                ani.SetBool("walk", false);
+
+                ani.SetBool("run", true);
+                transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+
+                ani.SetBool("attack", false);
+
+            }
+            else
+            {
+                ani.SetBool("walk", false);
+                ani.SetBool("run", false);  
+
+                ani.SetBool("attack", true);
+                atacando = true;
+            }
+
         }
+    }
+
+    public void Final_Ani()
+    { 
+        ani.SetBool("attack", false);
+        atacando = false;
     }
 
     void Update()

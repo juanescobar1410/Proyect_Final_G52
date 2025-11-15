@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/LowPolyDungeonsLite/Materials/LowPolyDungeonsLite_Texture_3.mat.meta
+guid: 3ab858d058861e846bf024491e59a41c
+========
 guid: 0f531a5d699ed0046b0c3bd1c93d520c
+>>>>>>>> origin/Juan-Andres:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/Materials/AllSky_DemoEnvironment_Light-AllSkyDemoEnv_LightMetal.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/LowPolyDungeonsLite/Materials/LowPolyDungeonsLite_Texture_01.mat.meta
+guid: 4839617ca20c0b442b267c35ca9a434f
+========
 guid: 2ff250be9e5a81c438910e7fe4c308c1
+>>>>>>>> origin/Juan-Andres:PryectoFinal_G52/Assets/Game/Materials/Arissa_DIFF_diffuse.mat.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
