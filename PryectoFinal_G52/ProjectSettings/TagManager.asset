@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Boss
+  - Enemy
+  - "Pu\xF1o"
   layers:
   - Default
   - TransparentFX
@@ -12,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Walls
   - 
   - 
   - 

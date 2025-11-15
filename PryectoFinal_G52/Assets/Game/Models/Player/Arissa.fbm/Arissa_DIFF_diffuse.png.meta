@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: fa23576b8c412914886d591fb021e001
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/LowPolyDungeonsLite/Textures/LowPolyDungeonsLite_Texture_01.png.meta
+guid: b38106ed9c2798142911f2b100ab9172
+========
+guid: 8a104d413bce3d846bd21e1ad6e7b53a
+>>>>>>>> origin/Juan-Andres:PryectoFinal_G52/Assets/Game/Models/Player/Arissa.fbm/Arissa_DIFF_diffuse.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
