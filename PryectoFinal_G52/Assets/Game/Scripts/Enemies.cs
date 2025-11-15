@@ -18,6 +18,7 @@ public class Enemigo1: MonoBehaviour
 
     }
 
+
     public void Comportamiento_Enemigo()
     {
         if (Vector3.Distance(transform.position, target.transform.position) > 5)
