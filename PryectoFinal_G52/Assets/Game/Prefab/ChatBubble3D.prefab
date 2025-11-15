@@ -288,6 +288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3728437068038445425}
   - component: {fileID: 3629238919459462207}
+  - component: {fileID: 5756206013270111201}
   m_Layer: 0
   m_Name: ChatBubble3D
   m_TagString: Untagged
@@ -331,6 +332,22 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &5756206013270111201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3728437068038445427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d7a1463353e39f40965545dd3424525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChatBubble3D
+  chatBubblePrefab: {fileID: 3728437068038445427}
+  happyIconSprite: {fileID: 6057340437567830950, guid: 271da4bc8fdd7de40b54c08d416cfa61, type: 3}
+  neutralIconSprite: {fileID: 98482534372328656, guid: 271da4bc8fdd7de40b54c08d416cfa61, type: 3}
+  angryIconSprite: {fileID: -2479988511871901995, guid: 271da4bc8fdd7de40b54c08d416cfa61, type: 3}
 --- !u!1 &3728437068281146895
 GameObject:
   m_ObjectHideFlags: 0

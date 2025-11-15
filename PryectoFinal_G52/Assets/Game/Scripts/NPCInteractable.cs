@@ -2,25 +2,29 @@ using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-
-
-
     [SerializeField] private string interactText;
-    void Start()
+    [SerializeField] private GameObject chatBubblePrefab; // Asigna tu prefab aquí
+
+    private Animator animator;
+    private NPCHeadLookAt npcHeadLookAt;
+
+    private void Awake()
     {
-        
-    }
-    public void Interact()
-    {
-       
+        animator = GetComponent<Animator>();
+        npcHeadLookAt = GetComponent<NPCHeadLookAt>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Interact(Transform interactorTransform)
     {
-        
+        // Crear el chat bubble
+        GameObject bubble = Instantiate(chatBubblePrefab, transform);
+        bubble.transform.localPosition = new Vector3(-.3f, 1.7f, 0f);
+        bubble.GetComponent<ChatBubble3D>().ShowMessage("Hello there!");
+
+        animator.SetTrigger("Talk");
+
+        float playerHeight = 1.7f;
+        npcHeadLookAt.LookAtPosition(interactorTransform.position + Vector3.up * playerHeight);
     }
 
     public string GetInteractText()
