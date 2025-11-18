@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class SwordHitbox : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider coll)
     {
-        if (other.CompareTag("Enemy"))
+        if (coll.CompareTag("Enemy"))
         {
-            Debug.Log("Golpeaste al enemigo: " + other.name);
+            coll.GetComponent<Enemigo1>().HP_Min -= 33;
         }
     }
 }
