@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/textures/Textures.meta
 guid: 053e98877b4acc542995756e4d743e6e
+========
+guid: de7cc47e3e954ca4db52ca0a2ed8f143
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Seven Swords/Swords/Textures.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

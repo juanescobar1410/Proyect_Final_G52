@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
 guid: 157813b36cf805642b9c1a3302b4b009
 ModelImporter:
   serializedVersion: 19300
@@ -6,9 +7,43 @@ ModelImporter:
   externalObjects: {}
   materials:
     materialImportMode: 1
+========
+guid: e8f07670fb0274e35a65e6e98594a930
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: AllSky_DemoEnvironment
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Landscape
+    second: {fileID: 2100000, guid: 1045d2cff7dde4d3ab5feb4f0dbc7f8f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TreeLeaves
+    second: {fileID: 2100000, guid: 5a2c0c63420584a7c99a4f89a19e51dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TreeTrunk
+    second: {fileID: 2100000, guid: 2f225ce8f2fae4ea3b08c9298a6f25e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rock
+    second: {fileID: 2100000, guid: 51dc696c8ce2945ce968026f5776ca52, type: 2}
+  materials:
+    importMaterials: 1
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -31,13 +66,14 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
-    meshCompression: 0
+    globalScale: 100
+    meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
@@ -46,6 +82,16 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+========
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
@@ -59,16 +105,26 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
+========
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
   referencedClips: []
   importAnimation: 1
+========
+  importAnimation: 1
+  copyAvatar: 0
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
   humanDescription:
     serializedVersion: 3
     human: []
@@ -96,8 +152,16 @@ ModelImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
   productId: 166022
   packageName: PolyArt - Ancient Village Pack
   packageVersion: 1.0
   assetPath: Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx
   uploadId: 365063
+========
+  productId: 146014
+  packageName: AllSky Free - 10 Sky / Skybox Set
+  packageVersion: 1.1.0
+  assetPath: Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx
+  uploadId: 679123
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
