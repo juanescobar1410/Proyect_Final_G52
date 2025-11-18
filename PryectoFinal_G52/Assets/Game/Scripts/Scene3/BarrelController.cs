@@ -201,6 +201,7 @@ public class BarrelController : MonoBehaviour
             if (Physics.Raycast(transform.position, moveDirection, detectionDistance))
             {
                 Debug.Log("Pared detectada. Parando barril.");
+                Debug.DrawRay(transform.position, moveDirection * detectionDistance, Color.red);
                 isMoving = false;
                 return;
             }

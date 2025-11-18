@@ -28,7 +28,7 @@ public class FogSmoothFade : MonoBehaviour
     {
         float startRate = emissionModule.rateOverTime.constant;
         float startAlpha = mainModule.startColor.color.a;
-        float startSize = mainModule.startSize.constant;
+        //float startSize = mainModule.startSize.constant;
 
         float t = 0f;
 
@@ -46,7 +46,7 @@ public class FogSmoothFade : MonoBehaviour
             mainModule.startColor = c;
 
             // 3. Reducir el tamaño
-            mainModule.startSize = Mathf.Lerp(startSize, 0.1f, progress);
+            //mainModule.startSize = Mathf.Lerp(startSize, 0.1f, progress);
 
             yield return null;
         }
