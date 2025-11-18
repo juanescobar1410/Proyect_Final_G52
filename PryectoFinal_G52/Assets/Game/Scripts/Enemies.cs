@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemigo1: MonoBehaviour
+public class Enemigo1 : MonoBehaviour
 {
     public int rutina;
     public float cronometro;
@@ -11,26 +11,35 @@ public class Enemigo1: MonoBehaviour
     public float grado;
 
     public GameObject target;
+
+    // --- SISTEMA DE VIDA ---
+    public int HP_Max = 100;
+    public int HP_Min = 100;  
+    public bool muerto = false;
+
     public bool atacando;
+
     void Start()
     {
         ani = GetComponent<Animator>();
-        target = GameObject.Find("Arissa");
-
+        target = GameObject.Find("ArissaPlayer");
+        HP_Min = HP_Max;
     }
-
 
     public void Comportamiento_Enemigo()
     {
+        if (muerto) return; 
+
         if (Vector3.Distance(transform.position, target.transform.position) > 5)
         {
             ani.SetBool("run", false);
             cronometro += 1 * Time.deltaTime;
             if (cronometro >= 4)
             {
-                rutina = Random.Range(0, 2);
+                rutina = Random.Range(0, 3);
                 cronometro = 0;
             }
+
             switch (rutina)
             {
                 case 0:
@@ -49,48 +58,54 @@ public class Enemigo1: MonoBehaviour
                     ani.SetBool("walk", true);
                     break;
             }
-
-
-
-
         }
         else
         {
             if (Vector3.Distance(transform.position, target.transform.position) > 1 && !atacando)
             {
-
                 var lookPos = target.transform.position - transform.position;
                 lookPos.y = 0;
                 var rotation = Quaternion.LookRotation(lookPos);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 2);
+
                 ani.SetBool("walk", false);
-
                 ani.SetBool("run", true);
+
                 transform.Translate(Vector3.forward * 2 * Time.deltaTime);
-
                 ani.SetBool("attack", false);
-
             }
             else
             {
                 ani.SetBool("walk", false);
-                ani.SetBool("run", false);  
+                ani.SetBool("run", false);
 
                 ani.SetBool("attack", true);
                 atacando = true;
             }
-
         }
     }
 
     public void Final_Ani()
-    { 
+    {
         ani.SetBool("attack", false);
         atacando = false;
     }
 
     void Update()
     {
+        if (!muerto && HP_Min <= 0)
+        {
+            Muerte();
+        }
+
         Comportamiento_Enemigo();
+    }
+
+    void Muerte()
+    {
+        muerto = true;
+        ani.SetTrigger("dead"); 
+
+        GetComponent<Collider>().enabled = false;
     }
 }
