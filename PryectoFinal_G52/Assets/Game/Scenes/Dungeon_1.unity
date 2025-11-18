@@ -8427,6 +8427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword
       objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d096c2dbc4ba8b344a7752253f0049ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: d096c2dbc4ba8b344a7752253f0049ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 83.33332
@@ -25449,6 +25453,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3951424495242864794, guid: 725d9061657be724facf6fda9fe05b4f, type: 3}
   m_PrefabInstance: {fileID: 1103249301}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1104976191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: d096c2dbc4ba8b344a7752253f0049ad, type: 3}
+  m_PrefabInstance: {fileID: 358309048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1113475679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32478,15 +32487,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2834198170078233053, guid: 60d9a39700a91c04f988743f04c56f61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.404396
+      value: -30.49
       objectReference: {fileID: 0}
     - target: {fileID: 2834198170078233053, guid: 60d9a39700a91c04f988743f04c56f61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00000023841858
+      value: 4.39
       objectReference: {fileID: 0}
     - target: {fileID: 2834198170078233053, guid: 60d9a39700a91c04f988743f04c56f61, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3113077
+      value: -23.64
       objectReference: {fileID: 0}
     - target: {fileID: 2834198170078233053, guid: 60d9a39700a91c04f988743f04c56f61, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32516,6 +32525,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8284434590287678784, guid: 60d9a39700a91c04f988743f04c56f61, type: 3}
+      propertyPath: 'armas.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1104976191}
     - target: {fileID: 8861534937675886035, guid: 60d9a39700a91c04f988743f04c56f61, type: 3}
       propertyPath: m_Center.y
       value: 91.21
