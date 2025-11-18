@@ -10,26 +10,44 @@ public class PlayerInteract : MonoBehaviour
     }
 
     // Update is called once per frame
+    
+    
+        [SerializeField] private Transform playerCameraTransform;
+        [SerializeField] private LayerMask pickUpLayerMask;
+        
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
             float interactRange = 2f;
+
+            // Intenta raycast primero para objetos pick-up
+            if (Physics.Raycast(playerCameraTransform.position,
+                               playerCameraTransform.forward,
+                               out RaycastHit raycastHit,
+                               interactRange,
+                               pickUpLayerMask))
+            {
+                Debug.Log(raycastHit.transform);
+                if (raycastHit.transform.TryGetComponent(out ObjetoRecolecionable objetoRecoleccionable))
+                {
+                    Debug.Log(objetoRecoleccionable);
+                   
+                }
+            }
+
+            // Si no hay nada que recoger, busca NPCs
             Physics.OverlapSphere(transform.position, interactRange);
-            Collider[] colliderArray = Physics.OverlapSphere(transform.position,interactRange);
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
                 if (collider.TryGetComponent(out NPCInteractable npcInteractable))
                 {
                     npcInteractable.Interact(transform);
                 }
-                        
             }
-
         }
-       
-
-
     }
 
     public NPCInteractable GetInteractableObject()

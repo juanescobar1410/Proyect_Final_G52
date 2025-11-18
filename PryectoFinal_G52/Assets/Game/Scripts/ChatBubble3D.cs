@@ -18,14 +18,12 @@ public class ChatBubble3D : MonoBehaviour
     private SpriteRenderer backgroundSpriteRenderer;
     private TextMeshPro textMeshPro;
 
-    private void Awake()
-    {
-        backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
-        textMeshPro = transform.Find("Text").GetComponent<TextMeshPro>();
-    }
-
     public void ShowMessage(string text)
     {
+        // Inicializar aquí para asegurar que existan
+        backgroundSpriteRenderer = transform.Find("Background").GetComponent<SpriteRenderer>();
+        textMeshPro = transform.Find("Text (TMP)").GetComponent<TextMeshPro>();
+
         textMeshPro.SetText(text);
         textMeshPro.ForceMeshUpdate();
         Vector2 textSize = textMeshPro.GetRenderedValues(false);
