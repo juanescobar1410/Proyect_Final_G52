@@ -207,12 +207,12 @@ public class Boss : MonoBehaviour
     
     public void ColliderWeaponTrue()
     {
-               hit[hit_select].GetComponent<CapsuleCollider>().enabled = true;
+               hit[hit_select].GetComponent<SphereCollider>().enabled = true;
     }
 
     public void ColliderWeaponFalse()
     {
-               hit[hit_select].GetComponent<CapsuleCollider>().enabled = false;
+               hit[hit_select].GetComponent<SphereCollider>().enabled = false;
     }
 
     //--lanzar fuego--//
