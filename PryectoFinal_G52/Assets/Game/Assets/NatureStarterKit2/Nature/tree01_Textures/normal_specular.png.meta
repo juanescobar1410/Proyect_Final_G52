@@ -1,12 +1,5 @@
 fileFormatVersion: 2
-guid: 8c09b7803cd35a7439d17c6f8c1afe76
-AssetOrigin:
-  serializedVersion: 1
-  productId: 52977
-  packageName: Nature Starter Kit 2
-  packageVersion: 1.0
-  assetPath: Assets/NatureStarterKit2/Nature/tree01_Textures/normal_specular.png
-  uploadId: 96407
+guid: ee38ee30d9b638242965c69bc3c9f5eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,7 +30,7 @@ TextureImporter:
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
@@ -61,7 +54,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 1
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -70,9 +63,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 1
+  applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform

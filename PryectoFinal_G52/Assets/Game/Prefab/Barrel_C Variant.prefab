@@ -159,6 +159,10 @@ PrefabInstance:
       value: Barrel_C Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4377933626515690895, guid: a1834b6441f5f964186d094e8fd881e5, type: 3}
+      propertyPath: m_TagString
+      value: Barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 4377933626515690895, guid: a1834b6441f5f964186d094e8fd881e5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -226,7 +230,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BarrelController
   moveSpeed: 5
   resetPoint: {fileID: 0}
-  boundaryLimit: 50
   detectionDistance: 0.6
 --- !u!136 &7033435169802724571
 CapsuleCollider:

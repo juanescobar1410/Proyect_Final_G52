@@ -102,7 +102,11 @@ QualitySettings:
     asyncUploadBufferSize: 16
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
+<<<<<<< HEAD
     customRenderPipeline: {fileID: 11400000, guid: 4b83569d67af61e458304325a23e5dfd, type: 2}
+=======
+    customRenderPipeline: {fileID: 11400000, guid: e64f92a2a2376b44aa7aa9a048ff7634, type: 2}
+>>>>>>> Catalina
     terrainQualityOverrides: 0
     terrainPixelError: 1
     terrainDetailDensityScale: 1
