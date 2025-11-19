@@ -14,21 +14,30 @@ public class Enemigo1 : MonoBehaviour
 
     // --- SISTEMA DE VIDA ---
     public int HP_Max = 100;
-    public int HP_Min = 100;  
+    public int HP_Min = 100;
     public bool muerto = false;
 
     public bool atacando;
+
+    // ---------------------------
+    //     AÑADIDO PARA FISICAS
+    // ---------------------------
+    private CharacterController controller;
+    // ---------------------------
 
     void Start()
     {
         ani = GetComponent<Animator>();
         target = GameObject.Find("ArissaPlayer");
         HP_Min = HP_Max;
+
+        // Inicializar CharacterController
+        controller = GetComponent<CharacterController>();
     }
 
     public void Comportamiento_Enemigo()
     {
-        if (muerto) return; 
+        if (muerto) return;
 
         if (Vector3.Distance(transform.position, target.transform.position) > 5)
         {
@@ -54,7 +63,13 @@ public class Enemigo1 : MonoBehaviour
 
                 case 2:
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
+
+                    // Movimiento original (NO borrar)
                     transform.Translate(Vector3.forward * 1 * Time.deltaTime);
+
+                    // Movimiento con físicas (AÑADIDO)
+                    controller.Move(transform.forward * 1 * Time.deltaTime);
+
                     ani.SetBool("walk", true);
                     break;
             }
@@ -71,7 +86,12 @@ public class Enemigo1 : MonoBehaviour
                 ani.SetBool("walk", false);
                 ani.SetBool("run", true);
 
+                // Movimiento original
                 transform.Translate(Vector3.forward * 2 * Time.deltaTime);
+
+                // Movimiento con físicas
+                controller.Move(transform.forward * 2 * Time.deltaTime);
+
                 ani.SetBool("attack", false);
             }
             else
@@ -104,8 +124,12 @@ public class Enemigo1 : MonoBehaviour
     void Muerte()
     {
         muerto = true;
-        ani.SetTrigger("dead"); 
+        ani.SetTrigger("dead");
 
         GetComponent<Collider>().enabled = false;
+
+
     }
+
+
 }
