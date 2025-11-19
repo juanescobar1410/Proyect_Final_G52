@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -10,9 +11,10 @@ public class PlayerAttack : MonoBehaviour
     [Header("Vida del jugador")]
     public int maxHP = 100;
     public int currentHP;
+    public Image barra;
 
     [Header("Monedas")]
-    public int monedaTotal = 0;  // <----- AGREGADO
+    public int monedaTotal = 0;
 
     private bool isAttacking = false;
     private bool isDead = false;
@@ -20,6 +22,24 @@ public class PlayerAttack : MonoBehaviour
     void Start()
     {
         currentHP = maxHP;
+
+        // Verificar que la barra esté asignada
+        if (barra == null)
+        {
+            Debug.LogError("¡La barra de vida NO está asignada en el Inspector!");
+
+            // Intentar buscarla automáticamente
+            barra = GameObject.Find("Jugador")?.GetComponent<Image>();
+
+            if (barra != null)
+            {
+                Debug.Log("Barra encontrada automáticamente!");
+            }
+        }
+        else
+        {
+            Debug.Log("Barra asignada correctamente: " + barra.name);
+        }
     }
 
     void Update()
@@ -30,6 +50,18 @@ public class PlayerAttack : MonoBehaviour
         {
             isAttacking = true;
             animator.SetTrigger("Attack");
+        }
+
+        // Verificar muerte en cada frame
+        if (currentHP <= 0 && !isDead)
+        {
+            Die();
+        }
+
+        // CORRECCIÓN: Convertir a float y clampearlo entre 0 y 1
+        if (barra != null)
+        {
+            barra.fillAmount = Mathf.Clamp01((float)currentHP / (float)maxHP);
         }
     }
 
@@ -49,6 +81,8 @@ public class PlayerAttack : MonoBehaviour
         if (isDead) return;
 
         currentHP -= amount;
+        currentHP = Mathf.Max(0, currentHP); // Evitar que sea negativo
+        Debug.Log("HP actual: " + currentHP + "/" + maxHP);
 
         if (currentHP <= 0)
         {
@@ -61,7 +95,6 @@ public class PlayerAttack : MonoBehaviour
         isDead = true;
         swordHitbox.SetActive(false);
         animator.SetTrigger("deadArissa");
-
         Invoke("Respawn", 5f);
     }
 
