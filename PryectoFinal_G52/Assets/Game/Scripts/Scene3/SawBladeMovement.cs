@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SawbladeMovement : MonoBehaviour
 {
-    public enum MoveAxis { X, Z }   //  Para elegir desplazamiento horizontal o frontal
+    public enum MoveAxis { X, Z }   // ab Para elegir desplazamiento horizontal o frontal
     public MoveAxis movementAxis = MoveAxis.X;
 
     [Header("Movimiento")]
