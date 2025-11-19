@@ -1,4 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
+guid: 63f9b0837cc26324aad9c9884782055c
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+========
 guid: e8f07670fb0274e35a65e6e98594a930
 ModelImporter:
   serializedVersion: 23
@@ -31,6 +40,7 @@ ModelImporter:
     second: {fileID: 2100000, guid: 51dc696c8ce2945ce968026f5776ca52, type: 2}
   materials:
     importMaterials: 1
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -63,6 +73,16 @@ ModelImporter:
     meshCompression: 1
     addColliders: 0
     useSRGBMaterialColor: 1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+========
     importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
@@ -71,17 +91,25 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
-    indexFormat: 1
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
+========
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -90,10 +118,15 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
+  referencedClips: []
+  importAnimation: 1
+========
   importAnimation: 1
   copyAvatar: 0
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -103,21 +136,32 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx.meta
+  productId: 166022
+  packageName: PolyArt - Ancient Village Pack
+  packageVersion: 1.0
+  assetPath: Assets/POLYART_Ancient Village/Models/Extra/PA_FireassetSet1_Source2.fbx
+  uploadId: 365063
+========
   productId: 146014
   packageName: AllSky Free - 10 Sky / Skybox Set
   packageVersion: 1.1.0
   assetPath: Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx
   uploadId: 679123
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Assets/AllSkyFree/_AllSkyFreeDemoEnvironment/AllSky_DemoEnvironment02.fbx.meta

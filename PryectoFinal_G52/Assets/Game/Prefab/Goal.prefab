@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1260016053282169323}
   - component: {fileID: 3449139287176197207}
+  - component: {fileID: 2495646452480772324}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -47,12 +48,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.16557887, y: 1.8434887, z: 1.5057875}
   m_Center: {x: -0.41721117, y: 0.42174506, z: 0.5189168}
+--- !u!114 &2495646452480772324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4185215358315685225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e469fa6f3d11afb45a08b2650cb3e1a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoalController
 --- !u!1001 &4195832844792728104
 PrefabInstance:
   m_ObjectHideFlags: 0
