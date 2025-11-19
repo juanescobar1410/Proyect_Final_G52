@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class Collectables : MonoBehaviour
+public class Collectable : MonoBehaviour
 {
     public enum TipoObjeto { Cura, Moneda }
     public TipoObjeto tipo;
 
-    public int healAmount = 30;   // Cantidad de vida que cura
-    public int coinAmount = 1;    // Cantidad de monedas que da
+    public int healAmount = 30;
+    public int coinAmount = 1;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,7 +28,7 @@ public class Collectables : MonoBehaviour
                     break;
             }
 
-            Destroy(gameObject); // Se elimina el objeto recogido
+            Destroy(gameObject);
         }
     }
 }

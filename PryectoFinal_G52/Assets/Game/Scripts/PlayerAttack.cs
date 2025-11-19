@@ -11,6 +11,9 @@ public class PlayerAttack : MonoBehaviour
     public int maxHP = 100;
     public int currentHP;
 
+    [Header("Monedas")]
+    public int monedaTotal = 0;  // <----- AGREGADO
+
     private bool isAttacking = false;
     private bool isDead = false;
 
@@ -56,10 +59,9 @@ public class PlayerAttack : MonoBehaviour
     private void Die()
     {
         isDead = true;
-        swordHitbox.SetActive(false); 
-        animator.SetTrigger("deadArissa");   
+        swordHitbox.SetActive(false);
+        animator.SetTrigger("deadArissa");
 
-    
         Invoke("Respawn", 5f);
     }
 

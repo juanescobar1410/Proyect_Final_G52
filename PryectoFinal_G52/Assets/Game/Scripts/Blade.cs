@@ -8,5 +8,11 @@ public class SwordHitbox : MonoBehaviour
         {
             coll.GetComponent<Enemigo1>().HP_Min -= 33;
         }
+
+        if (coll.transform.parent != null && coll.transform.parent.name == "FakeWall")
+        {
+            Destroy(coll.transform.parent.gameObject);
+        }
+
     }
 }

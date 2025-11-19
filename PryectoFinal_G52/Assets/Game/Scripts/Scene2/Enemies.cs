@@ -12,18 +12,21 @@ public class Enemigo1 : MonoBehaviour
 
     public GameObject target;
 
-    // --- SISTEMA DE VIDA ---
     public int HP_Max = 100;
     public int HP_Min = 100;
     public bool muerto = false;
 
     public bool atacando;
 
-    // ---------------------------
-    //     AÑADIDO PARA FISICAS
-    // ---------------------------
     private CharacterController controller;
-    // ---------------------------
+
+    [Header("DROPS")]
+    public GameObject dropMoneda;
+    public GameObject dropPocion;
+
+    [Range(0f, 1f)] public float probMoneda = 0.5f;
+    [Range(0f, 1f)] public float probPocion = 0.2f;
+
 
     void Start()
     {
@@ -31,7 +34,6 @@ public class Enemigo1 : MonoBehaviour
         target = GameObject.Find("ArissaPlayer");
         HP_Min = HP_Max;
 
-        // Inicializar CharacterController
         controller = GetComponent<CharacterController>();
     }
 
@@ -64,10 +66,8 @@ public class Enemigo1 : MonoBehaviour
                 case 2:
                     transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
 
-                    // Movimiento original (NO borrar)
                     transform.Translate(Vector3.forward * 1 * Time.deltaTime);
 
-                    // Movimiento con físicas (AÑADIDO)
                     controller.Move(transform.forward * 1 * Time.deltaTime);
 
                     ani.SetBool("walk", true);
@@ -86,10 +86,8 @@ public class Enemigo1 : MonoBehaviour
                 ani.SetBool("walk", false);
                 ani.SetBool("run", true);
 
-                // Movimiento original
                 transform.Translate(Vector3.forward * 2 * Time.deltaTime);
 
-                // Movimiento con físicas
                 controller.Move(transform.forward * 2 * Time.deltaTime);
 
                 ani.SetBool("attack", false);
@@ -128,8 +126,22 @@ public class Enemigo1 : MonoBehaviour
 
         GetComponent<Collider>().enabled = false;
 
-
+        DropLoot();
     }
 
 
+    void DropLoot()
+    {
+        Vector3 posicionDrop = transform.position + Vector3.up * 0.5f;
+
+        if (Random.value <= probMoneda && dropMoneda != null)
+        {
+            Instantiate(dropMoneda, posicionDrop, Quaternion.identity);
+        }
+
+        if (Random.value <= probPocion && dropPocion != null)
+        {
+            Instantiate(dropPocion, posicionDrop, Quaternion.identity);
+        }
+    }
 }
