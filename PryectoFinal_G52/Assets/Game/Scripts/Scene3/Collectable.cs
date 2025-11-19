@@ -10,7 +10,6 @@ public class Collectable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Buscar el script del jugador
         PlayerAttack player = other.GetComponent<PlayerAttack>();
 
         if (player != null)
@@ -19,12 +18,20 @@ public class Collectable : MonoBehaviour
             {
                 case TipoObjeto.Cura:
                     player.currentHP = Mathf.Min(player.currentHP + healAmount, player.maxHP);
-                    Debug.Log("Jugador curado +" + healAmount);
+
+                    // Actualizar UI
+                    if (player.vidaText != null)
+                        player.vidaText.text = "HP: " + player.currentHP;
+
                     break;
 
                 case TipoObjeto.Moneda:
                     player.monedaTotal += coinAmount;
-                    Debug.Log("Moneda recogida. Total = " + player.monedaTotal);
+
+                    // Actualizar UI
+                    if (player.monedasText != null)
+                        player.monedasText.text = " " + player.monedaTotal;
+
                     break;
             }
 

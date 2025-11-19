@@ -6,8 +6,7 @@ public class SwordHitbox : MonoBehaviour
     {
         if (coll.CompareTag("Enemy"))
         {
-            Debug.Log("Hit enemy with sword");
-            //coll.GetComponent<Enemigo1>().HP_Min -= 33;
+            coll.GetComponent<Enemigo1>().HP_Min -= 33;
         }
 
         if (coll.transform.parent != null && coll.transform.parent.name == "FakeWall")

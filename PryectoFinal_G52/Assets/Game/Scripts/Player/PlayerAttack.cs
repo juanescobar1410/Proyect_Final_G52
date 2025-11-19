@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -18,6 +19,8 @@ public class PlayerAttack : MonoBehaviour
 
     private bool isAttacking = false;
     private bool isDead = false;
+    public TMP_Text vidaText;
+    public TMP_Text monedasText;
 
     void Start()
     {
