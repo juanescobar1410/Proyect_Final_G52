@@ -36,10 +36,7 @@ public class ControllerScene1 : MonoBehaviour
         return llavesRecolectadas.Contains(idLlave);
     }
 
-    public void CambiarEscena(string nombreEscena)
-    {
-        SceneManager.LoadScene(nombreEscena);
-    }
+    
 
     private void OnTriggerEnter(Collider other)
     {

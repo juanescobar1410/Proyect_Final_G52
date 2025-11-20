@@ -1,6 +1,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Gestiona las interacciones del jugador.
+/// Permite recoger objetos mediante raycast y hablar con NPCs dentro de un rango.
+/// También identifica el NPC interactuable más cercano para mostrar información en la UI.
+/// </summary>
+
 public class PlayerInteract : MonoBehaviour
 {
     void Start()
@@ -16,7 +22,7 @@ public class PlayerInteract : MonoBehaviour
         {
             float interactRange = 2f;
 
-            // Intenta raycast primero para objetos pick-up
+            
             if (Physics.Raycast(playerCameraTransform.position,
                                playerCameraTransform.forward,
                                out RaycastHit raycastHit,
@@ -31,7 +37,7 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
 
-            // Si no hay nada que recoger, busca NPCs
+            
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {

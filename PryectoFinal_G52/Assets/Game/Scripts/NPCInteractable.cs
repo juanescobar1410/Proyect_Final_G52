@@ -1,5 +1,12 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// Representa un NPC con el que el jugador puede interactuar.
+/// Al interactuar, muestra un chat bubble con diálogo y activa
+/// una animación de hablar si existe un Animator.
+/// También proporciona el texto que aparece en la UI de interacción.
+/// </summary>
+
 public class NPCInteractable : MonoBehaviour
 {
     [SerializeField] private string interactText;
@@ -18,7 +25,7 @@ public class NPCInteractable : MonoBehaviour
     {
         GameObject bubble = Instantiate(chatBubblePrefab, transform);
         bubble.transform.localPosition = new Vector3(3f, 3f, 0f);
-        bubble.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); // ← AGREGAR ESTA LÍNEA (mitad del tamaño)
+        bubble.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); 
         bubble.GetComponent<ChatBubble3D>().ShowMessage(textoDialogo);
 
         if (animator != null)

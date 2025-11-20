@@ -17,7 +17,7 @@ public class Door : MonoBehaviour
 
     void Update()
     {
-        // Verifica constantemente si el jugador tiene la llave
+        
         if (controllerScene.TieneLlave(llaveRequerida))
         {
             Debug.Log("Puerta eliminada - jugador tiene la llave: " + llaveRequerida);
