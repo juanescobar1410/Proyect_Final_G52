@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Scripts/Player.meta
 guid: 0e4ef10b39c509f4d8b9756f1ec1a4bd
+========
+guid: af940de62a3e0a24886134baf2c55faf
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/Game/Fonts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

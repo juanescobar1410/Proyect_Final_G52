@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Scripts/Boss.meta
 guid: 62b389b4e5885aa4ca039517e127d6fe
+========
+guid: 60973c4ee1f331741b539ff6687276e7
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

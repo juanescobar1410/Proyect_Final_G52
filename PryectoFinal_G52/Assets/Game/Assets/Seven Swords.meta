@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/Seven Swords.meta
 guid: 9e0385ae30b96f44eb1d21e7990e011d
+========
+guid: 036595ac03790ba48b5017ed8191039a
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Icons.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

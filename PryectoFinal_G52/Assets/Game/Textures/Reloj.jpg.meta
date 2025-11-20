@@ -1,5 +1,16 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Textures/Reloj.jpg.meta
 guid: 81a872080697f1d4aa42da14c4aa7453
+========
+guid: c9006339b2156b142934eac2999ef67c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 159068
+  packageName: GUI Parts
+  packageVersion: 1.0
+  assetPath: Assets/GUI_Parts/Gui_parts/button_ready_on.png
+  uploadId: 342429
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/button_ready_on.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,6 +45,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Textures/Reloj.jpg.meta
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -41,9 +53,18 @@ TextureImporter:
     wrapV: 0
     wrapW: 0
   nPOTScale: 1
+========
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/button_ready_on.png.meta
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -54,7 +75,11 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Textures/Reloj.jpg.meta
   textureType: 0
+========
+  textureType: 8
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/button_ready_on.png.meta
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -63,9 +88,15 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Textures/Reloj.jpg.meta
   applyGammaDecoding: 0
   swizzle: 50462976
   cookieLightType: 0
+========
+  applyGammaDecoding: 1
+  swizzle: 50462976
+  cookieLightType: 1
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/button_ready_on.png.meta
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -94,7 +125,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Textures/Reloj.jpg.meta
     buildTarget: WebGL
+========
+    buildTarget: WindowsStoreApps
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/button_ready_on.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -104,6 +139,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Textures/Reloj.jpg.meta
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
@@ -117,6 +153,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
+========
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/button_ready_on.png.meta
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -126,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dda1396aaa618124bafb338ae6fac3c7
     internalID: 0
     vertices: []
     indices: 

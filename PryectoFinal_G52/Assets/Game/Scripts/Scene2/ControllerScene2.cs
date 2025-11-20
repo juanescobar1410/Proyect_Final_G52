@@ -3,7 +3,31 @@ using TMPro;
 
 public class SceneController : MonoBehaviour
 {
+    /// <summary>
+    /// Controla toda la lógica general del juego dentro de la escena.
+    /// 
+    /// FUNCIONES PRINCIPALES:
+    /// 
+    /// - Administra los 3 puzzles/salas del juego y decide cuál está activo.
+    /// - Maneja las puertas o bloqueos entre puzzles, activándolos o desactivándolos cuando corresponde.
+    /// - Reinicia y arranca el Timer al iniciar cada puzzle.
+    /// - Calcula el puntaje obtenido en cada puzzle, incluyendo bonificaciones según el tiempo.
+    /// - Guarda los tiempos y puntajes individuales para mostrarlos al final.
+    /// - Reproduce un audio de fondo en bucle (si se asigna un AudioSource).
+    /// - Detecta cuando se completa un puzzle y avanza al siguiente.
+    /// - Al finalizar el puzzle 3, muestra un panel final con:
+    ///       - Tiempos de cada puzzle
+    ///       - Puntajes individuales
+    ///       - Tiempo total acumulado
+    ///       - Puntaje total
+    /// 
+    /// Este script centraliza el flujo del juego y coordina la progresión entre los puzzles
+    /// sin necesidad de cambiar de escena.
+    /// </summary>
     public static SceneController Instance;
+
+    [Header("Audio")]
+    public AudioSource loopAudio;   // 
 
     [Header("Salas/Puzzles")]
     public GameObject puzzle1;
@@ -20,12 +44,11 @@ public class SceneController : MonoBehaviour
 
     [Header("Sistema de Puntaje")]
     public int baseScore = 100;
-    public float bonusTimeLimit = 45f;   // Tiempo para obtener bonificación
-    public int bonusMultiplier = 5;       // Entre más alto  más bonus
+    public float bonusTimeLimit = 45f;
+    public int bonusMultiplier = 5;
 
     private int currentPuzzle = 1;
 
-    // Datos guardados para la pantalla final
     private float[] puzzleTimes = new float[3];
     private int[] puzzleScores = new int[3];
 
@@ -49,20 +72,24 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
+        //  Reproducir música looping si está asignada
+        if (loopAudio != null)
+        {
+            loopAudio.loop = true;
+            loopAudio.Play();
+        }
+
         InitializeLocks();
         StartPuzzle(1);
     }
 
     private void InitializeLocks()
     {
-        if (puzzle1Lock != null) puzzle1Lock.SetActive(false); // Puzzle 1 desbloqueado
+        if (puzzle1Lock != null) puzzle1Lock.SetActive(false);
         if (puzzle2Lock != null) puzzle2Lock.SetActive(true);
         if (puzzle3Lock != null) puzzle3Lock.SetActive(true);
     }
 
-    // -----------------------------------
-    //       INICIAR PUZZLE
-    // -----------------------------------
     public void StartPuzzle(int puzzleIndex)
     {
         currentPuzzle = puzzleIndex;
@@ -77,25 +104,18 @@ public class SceneController : MonoBehaviour
         Debug.Log("Inició Puzzle " + puzzleIndex);
     }
 
-    // -----------------------------------
-    //       COMPLETAR PUZZLE
-    // -----------------------------------
     public void CompletePuzzle()
     {
         timer.TimerStop();
         float finalTime = timer.StopTime;
 
-        // Guardar tiempo por puzzle
         puzzleTimes[currentPuzzle - 1] = finalTime;
 
-        // Calcular bonus
         int bonus = Mathf.Max(0, (int)((bonusTimeLimit - finalTime) * bonusMultiplier));
 
-        // Puntaje final del puzzle
         int puzzleScore = baseScore + bonus;
         puzzleScores[currentPuzzle - 1] = puzzleScore;
 
-        // Guardarlo en GameManager
         GameManager.Instance.AddTime(finalTime);
         GameManager.Instance.AddScore(puzzleScore);
 
@@ -104,9 +124,6 @@ public class SceneController : MonoBehaviour
         UnlockNextPuzzle();
     }
 
-    // -----------------------------------
-    //     DESBLOQUEO SECUENCIAL
-    // -----------------------------------
     private void UnlockNextPuzzle()
     {
         if (currentPuzzle == 1)
@@ -125,26 +142,20 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    // -----------------------------------
-    //           FIN DEL JUEGO
-    // -----------------------------------
     private void EndGame()
     {
         Debug.Log("Juego terminado.");
 
         finalPanel.SetActive(true);
 
-        // Tiempos individuales
         p1TimeText.text = puzzleTimes[0].ToString("0.00") + " s";
         p2TimeText.text = puzzleTimes[1].ToString("0.00") + " s";
         p3TimeText.text = puzzleTimes[2].ToString("0.00") + " s";
 
-        // Puntajes individuales
         p1ScoreText.text = puzzleScores[0].ToString();
         p2ScoreText.text = puzzleScores[1].ToString();
         p3ScoreText.text = puzzleScores[2].ToString();
 
-        // Totales
         totalTimeText.text = GameManager.Instance.GlobalTime.ToString("0.00") + " s";
         totalScoreText.text = GameManager.Instance.Score.ToString();
     }

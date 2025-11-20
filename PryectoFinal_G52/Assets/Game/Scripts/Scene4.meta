@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Scripts/Scene4.meta
 guid: 2bf10671b496c0a48b6fc8369669cbc6
+========
+guid: a957a67a46c13fc4896c247b570581f4
+>>>>>>>> origin/Catalina:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
