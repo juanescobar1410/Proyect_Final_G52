@@ -922,8 +922,6 @@ MonoBehaviour:
   target: {fileID: 196487028}
   offset: {x: 0, y: 5, z: -10}
   smoothSpeed: 0.125
-  minDistance: 1
-  collisionPadding: 0.2
 --- !u!4 &162115624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8658826975651601233, guid: 41996a6ea1c51594381fbbe2d45b1187, type: 3}
@@ -10930,7 +10928,7 @@ PrefabInstance:
     - target: {fileID: 8328509268577167364, guid: e7a79a14190d3d34f93236ba7164d734, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1a3d10ef157cc2149a40c0e06538773b, type: 2}
+      objectReference: {fileID: 2100000, guid: ca32cada060cf774dbd29b2f3410086a, type: 2}
     - target: {fileID: 8378305016021551963, guid: e7a79a14190d3d34f93236ba7164d734, type: 3}
       propertyPath: m_LocalScale.x
       value: 4.229122

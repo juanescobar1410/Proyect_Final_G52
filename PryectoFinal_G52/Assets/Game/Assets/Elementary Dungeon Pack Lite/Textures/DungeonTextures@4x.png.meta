@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Textures/DungeonTextures@4x.png.meta
 guid: f9aaa450c8910404685e66908a5bfad9
-========
-guid: a195a893970f3ab4990bd06e18a0b308
->>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Rocks_01.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,21 +33,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Textures/DungeonTextures@4x.png.meta
     filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 0
     wrapV: 0
     wrapW: 0
-========
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
-    wrapU: -1
-    wrapV: -1
-    wrapW: -1
->>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Rocks_01.png.meta
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
@@ -74,10 +61,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
-<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Textures/DungeonTextures@4x.png.meta
   ignorePngGamma: 0
-========
->>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Rocks_01.png.meta
   applyGammaDecoding: 0
   platformSettings:
   - serializedVersion: 3
@@ -114,16 +98,8 @@ TextureImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Textures/DungeonTextures@4x.png.meta
   productId: 242692
   packageName: Lite Dungeon Pack - Low Poly 3D Art by Gridness
   packageVersion: 1.0
-  assetPath: Assets/Gridness Studios/Elementary Dungeon Pack Lite/Textures/DungeonTextures@4x.png
+  assetPath: Assets/Game/Assets/Elementary Dungeon Pack Lite/Textures/DungeonTextures@4x.png
   uploadId: 551791
-========
-  productId: 122225
-  packageName: Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES
-  packageVersion: 4.2.1
-  assetPath: Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Rocks_01.png
-  uploadId: 721311
->>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Rocks_01.png.meta
