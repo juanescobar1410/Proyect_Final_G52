@@ -3,6 +3,20 @@ using UnityEngine;
 
 public class BarrelController : MonoBehaviour
 {
+
+    /// <summary>
+    /// Controla el comportamiento del barril dentro del puzzle.
+    /// 
+    /// - Permite mover el barril en una dirección específica cuando un libro es activado.
+    /// - Usa un raycast hacia adelante para detectar paredes u obstáculos; si detecta uno, detiene el movimiento.
+    /// - Si el barril debe reaparecer, se mueve automáticamente al punto de respawn asignado en resetPoint.
+    /// - Reproduce un sonido corto cada vez que se inicia un movimiento (si moveSound está asignado).
+    /// - Si el barril colisiona con un objeto con tag "Blades", se considera destruido y reaparece en el resetPoint.
+    /// 
+    /// Este script se usa para que el barril se desplace en línea recta hasta chocar con algo,
+    /// permitiendo resolver los puzzles basados en movimiento direccional.
+    /// </summary>
+
     [Header("Movimiento del barril")]
     public float moveSpeed = 5f;
 

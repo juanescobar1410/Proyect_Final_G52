@@ -3,6 +3,27 @@ using TMPro;
 
 public class SceneController : MonoBehaviour
 {
+    /// <summary>
+    /// Controla toda la lógica general del juego dentro de la escena.
+    /// 
+    /// FUNCIONES PRINCIPALES:
+    /// 
+    /// - Administra los 3 puzzles/salas del juego y decide cuál está activo.
+    /// - Maneja las puertas o bloqueos entre puzzles, activándolos o desactivándolos cuando corresponde.
+    /// - Reinicia y arranca el Timer al iniciar cada puzzle.
+    /// - Calcula el puntaje obtenido en cada puzzle, incluyendo bonificaciones según el tiempo.
+    /// - Guarda los tiempos y puntajes individuales para mostrarlos al final.
+    /// - Reproduce un audio de fondo en bucle (si se asigna un AudioSource).
+    /// - Detecta cuando se completa un puzzle y avanza al siguiente.
+    /// - Al finalizar el puzzle 3, muestra un panel final con:
+    ///       - Tiempos de cada puzzle
+    ///       - Puntajes individuales
+    ///       - Tiempo total acumulado
+    ///       - Puntaje total
+    /// 
+    /// Este script centraliza el flujo del juego y coordina la progresión entre los puzzles
+    /// sin necesidad de cambiar de escena.
+    /// </summary>
     public static SceneController Instance;
 
     [Header("Audio")]
