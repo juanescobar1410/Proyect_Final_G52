@@ -1,5 +1,10 @@
 using UnityEngine;
 
+/// <summary>
+/// Controla una puerta que se destruye automáticamente
+/// cuando el jugador posee la llave requerida registrada en el controlador de escena.
+/// </summary>
+
 public class Door : MonoBehaviour
 {
     [SerializeField] private string llaveRequerida = "llave1";
