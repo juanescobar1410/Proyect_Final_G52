@@ -1,9 +1,17 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/NatureStarterKit2/Nature/tree01_Textures/diffuse.png.meta
 guid: e824b30902d165440adf746fbeb4d606
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
+========
+guid: 1b92b31acbcdce24ba9dc6d01dbc2e84
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Grass_01.png.meta
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
@@ -62,10 +70,14 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/NatureStarterKit2/Nature/tree01_Textures/diffuse.png.meta
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
   cookieLightType: 0
+========
+  applyGammaDecoding: 0
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Grass_01.png.meta
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -83,6 +95,21 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/NatureStarterKit2/Nature/tree01_Textures/diffuse.png.meta
+========
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Grass_01.png.meta
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -93,7 +120,23 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/NatureStarterKit2/Nature/tree01_Textures/diffuse.png.meta
   - serializedVersion: 4
+========
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Grass_01.png.meta
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -141,3 +184,13 @@ TextureImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/NatureStarterKit2/Nature/tree01_Textures/diffuse.png.meta
+========
+AssetOrigin:
+  serializedVersion: 1
+  productId: 122225
+  packageName: Lowpoly Medieval Peasants - Free - MEDIEVAL FANTASY SERIES
+  packageVersion: 4.2.1
+  assetPath: Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Grass_01.png
+  uploadId: 721311
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures/PT_Grass_01.png.meta

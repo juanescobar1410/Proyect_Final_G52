@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/NatureStarterKit2/Nature/bush02_Textures.meta
 guid: 94feb28a29cac1845af7b73c3bcc68bb
 folderAsset: yes
 timeCreated: 1552764648
+========
+guid: 2fe323f58b2eff8478619059f3c2c0a2
+folderAsset: yes
+timeCreated: 1538482077
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Characters.meta
 licenseType: Store
 DefaultImporter:
   userData: 

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/RPG Pack/Textures.meta
 guid: a7ecc28292d894549b3f819677754859
 folderAsset: yes
 timeCreated: 1473740760
+========
+guid: 394ffe8a892cb8c47a1f7a9e715075b9
+folderAsset: yes
+timeCreated: 1530676126
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Polytope Studio/Lowpoly_Environments/Sources/Textures.meta
 licenseType: Store
 DefaultImporter:
   userData: 

@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
 guid: 4293f3f43e7a5524dbcb191b0ef09d9c
 AssetOrigin:
   serializedVersion: 1
@@ -11,9 +12,16 @@ TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
+========
+guid: 85fdc8ea005efab47acaf30327201c11
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -32,7 +40,11 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
   ignoreMipmapLimit: 0
+========
+  ignoreMasterTextureLimit: 0
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -41,6 +53,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
     filterMode: 0
     aniso: 1
     mipBias: 0
@@ -48,6 +61,15 @@ TextureImporter:
     wrapV: 1
     wrapW: 1
   nPOTScale: 0
+========
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta
   lightmap: 0
   compressionQuality: 50
   spriteMode: 1
@@ -59,10 +81,15 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
   textureType: 8
   textureShape: 1
+========
+  textureType: 0
+  textureShape: 2
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta
   singleChannelComponent: 0
   flipbookRows: 1
   flipbookColumns: 1
@@ -70,9 +97,14 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
   applyGammaDecoding: 1
   swizzle: 50462976
   cookieLightType: 1
+========
+  applyGammaDecoding: 0
+  cookieLightType: 0
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -100,8 +132,13 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
   - serializedVersion: 4
     buildTarget: WindowsStoreApps
+========
+  - serializedVersion: 3
+    buildTarget: Server
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -127,11 +164,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
     spriteCustomMetadata:
       entries: []
     nameFileIdTable: {}
   mipmapLimitGroupName: 
+========
+    nameFileIdTable: {}
+  spritePackingTag: 
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/GUI_Parts/Gui_parts/Mini_frame0.png.meta
+========
+AssetOrigin:
+  serializedVersion: 1
+  productId: 260727
+  packageName: Animals FREE - Animated Low Poly 3D Models
+  packageVersion: 2.3
+  assetPath: Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png
+  uploadId: 785724
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/ithappy/Animals_FREE/Skyboxes/Skybox_Textures/Skybox_5.png.meta

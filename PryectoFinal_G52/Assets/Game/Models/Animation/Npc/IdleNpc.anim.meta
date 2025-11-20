@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d40c12a66e17fde45a4507e033e8a40d
+NativeFormatImporter:
+  externalObjects: {}
+<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Materials/Mat_Flag.mat.meta
+  mainObjectFileID: 2100000
+=======
+  mainObjectFileID: 7400000
+>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Models/Animation/Npc/IdleNpc.anim.meta
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 242692
+  packageName: Lite Dungeon Pack - Low Poly 3D Art by Gridness
+  packageVersion: 1.0
+  assetPath: Assets/Gridness Studios/Elementary Dungeon Pack Lite/Materials/Mat_Flag.mat
+  uploadId: 551791

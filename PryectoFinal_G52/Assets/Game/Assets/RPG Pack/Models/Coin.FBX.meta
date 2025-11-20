@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/RPG Pack/Models/Coin.FBX.meta
 guid: 242d0c84f77361d4abc018c8b39c5d92
 timeCreated: 1473740681
 licenseType: Store
@@ -14,50 +15,96 @@ ModelImporter:
     9500000: //RootNode
   materials:
     importMaterials: 0
+========
+guid: edcc86a903182d0429c0d7b2c727fec0
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Elementary Dungeon Pack Lite/Meshes/DungeonPackLite.fbx.meta
     materialName: 0
     materialSearch: 1
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
     motionNodeName: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/RPG Pack/Models/Coin.FBX.meta
     globalScale: 2.5
+========
+    globalScale: 1
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Elementary Dungeon Pack Lite/Meshes/DungeonPackLite.fbx.meta
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
     importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/RPG Pack/Models/Coin.FBX.meta
   importAnimation: 0
   copyAvatar: 0
   humanDescription:
+========
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Elementary Dungeon Pack Lite/Meshes/DungeonPackLite.fbx.meta
     human: []
     skeleton: []
     armTwist: 0.5
@@ -67,19 +114,35 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/RPG Pack/Models/Coin.FBX.meta
+========
+  autoGenerateAvatarMappingIfUnspecified: 1
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Elementary Dungeon Pack Lite/Meshes/DungeonPackLite.fbx.meta
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
+<<<<<<<< HEAD:PryectoFinal_G52/Assets/Game/Assets/RPG Pack/Models/Coin.FBX.meta
   productId: 71778
   packageName: Potions, Coin And Box of Pandora Pack
   packageVersion: 1.0
   assetPath: Assets/RPG Pack/Models/Coin.FBX
   uploadId: 137499
+========
+  productId: 242692
+  packageName: Lite Dungeon Pack - Low Poly 3D Art by Gridness
+  packageVersion: 1.0
+  assetPath: Assets/Gridness Studios/Elementary Dungeon Pack Lite/Meshes/DungeonPackLite.fbx
+  uploadId: 551791
+>>>>>>>> origin/Juanca:PryectoFinal_G52/Assets/Game/Assets/Elementary Dungeon Pack Lite/Elementary Dungeon Pack Lite/Meshes/DungeonPackLite.fbx.meta

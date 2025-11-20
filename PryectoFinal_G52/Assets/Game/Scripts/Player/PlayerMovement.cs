@@ -40,7 +40,7 @@ public class PlayerMovementDebug : MonoBehaviour
     private Vector3 velocity;
     private bool isGroundedByController;
     private bool isGroundedBySphere;
-     
+
     // animator hashes (si los usas)
     private static readonly int VelX = Animator.StringToHash("velX");
     private static readonly int VelY = Animator.StringToHash("velY");
@@ -161,6 +161,3 @@ public class PlayerMovementDebug : MonoBehaviour
         }
     }
 }
-
-
-

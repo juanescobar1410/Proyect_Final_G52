@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 541d2f439ec0dbd4a87b83c01acfcf6f
+=======
+guid: daf0773df0679834b96666281c821c8f
+>>>>>>> origin/Juanca
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
