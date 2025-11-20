@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NPCInteractable : MonoBehaviour
 {
@@ -6,7 +6,7 @@ public class NPCInteractable : MonoBehaviour
     [SerializeField] private string textoDialogo;
     [SerializeField] private GameObject chatBubblePrefab;
     private Animator animator;
-    private NPCHeadLookAt npcHeadLookAt;
+   
 
     private void Awake()
     {
@@ -18,6 +18,7 @@ public class NPCInteractable : MonoBehaviour
     {
         GameObject bubble = Instantiate(chatBubblePrefab, transform);
         bubble.transform.localPosition = new Vector3(3f, 3f, 0f);
+        bubble.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f); // ← AGREGAR ESTA LÍNEA (mitad del tamaño)
         bubble.GetComponent<ChatBubble3D>().ShowMessage(textoDialogo);
 
         if (animator != null)
@@ -25,11 +26,7 @@ public class NPCInteractable : MonoBehaviour
             Debug.Log("Trigger Talk activado");
             animator.SetTrigger("Talk");
         }
-
-        //float playerHeight = 1.7f;
-        //npcHeadLookAt.LookAtPosition(interactorTransform.position + Vector3.up * playerHeight);
     }
-
     public string GetInteractText()
     {
         return interactText;

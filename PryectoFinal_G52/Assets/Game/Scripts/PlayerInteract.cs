@@ -9,7 +9,6 @@ public class PlayerInteract : MonoBehaviour
 
     [SerializeField] private Transform playerCameraTransform;
     [SerializeField] private LayerMask pickUpLayerMask;
-    [SerializeField] private LayerMask doorLayerMask; // Nueva layer para puertas
 
     private void Update()
     {
@@ -32,21 +31,7 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
 
-            // Intenta raycast para puertas
-            if (Physics.Raycast(playerCameraTransform.position,
-                               playerCameraTransform.forward,
-                               out RaycastHit doorHit,
-                               interactRange,
-                               doorLayerMask))
-            {
-                if (doorHit.transform.TryGetComponent(out Door door))
-                {
-                    door.Interactuar();
-                }
-            }
-
             // Si no hay nada que recoger, busca NPCs
-            Physics.OverlapSphere(transform.position, interactRange);
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
@@ -61,7 +46,7 @@ public class PlayerInteract : MonoBehaviour
     public NPCInteractable GetInteractableObject()
     {
         List<NPCInteractable> npcInteractableList = new List<NPCInteractable>();
-        float interactRange = 4f;
+        float interactRange = 2f;
         Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
         foreach (Collider collider in colliderArray)
         {
@@ -79,7 +64,7 @@ public class PlayerInteract : MonoBehaviour
             }
             else
             {
-                if (Vector3.Distance(transform.position, npcInteractable.transform.position) <
+                if (Vector3.Distance(transform.position, npcInteractable.transform.position)<
                     Vector3.Distance(transform.position, closestNPCInteractable.transform.position))
                 {
                     closestNPCInteractable = npcInteractable;

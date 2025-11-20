@@ -1,6 +1,14 @@
 using TMPro;
 using UnityEngine;
 
+
+/// <summary>
+/// Controla la UI de interacción del jugador.
+/// Muestra un panel con texto cuando el jugador puede interactuar
+/// con un NPC u objeto, y lo oculta cuando no hay nada interactuable.
+/// </summary>
+
+
 public class PlayerInteractUI : MonoBehaviour
 {
 

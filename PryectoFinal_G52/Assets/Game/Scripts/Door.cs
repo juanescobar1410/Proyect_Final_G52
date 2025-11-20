@@ -10,17 +10,13 @@ public class Door : MonoBehaviour
         controllerScene = FindFirstObjectByType<ControllerScene1>();
     }
 
-    public void Interactuar()
+    void Update()
     {
-        // Verifica si el jugador tiene la llave
+        // Verifica constantemente si el jugador tiene la llave
         if (controllerScene.TieneLlave(llaveRequerida))
         {
-            Debug.Log("Puerta abierta con llave: " + llaveRequerida);
+            Debug.Log("Puerta eliminada - jugador tiene la llave: " + llaveRequerida);
             Destroy(gameObject);
-        }
-        else
-        {
-            Debug.Log("Necesitas la llave: " + llaveRequerida);
         }
     }
 }
