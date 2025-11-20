@@ -2383,7 +2383,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7936834669806457470, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.34067917
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7936834669806457470, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34924,6 +34924,17 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516448742}
   m_Enabled: 1
+--- !u!114 &1516448761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8284434590287678784, guid: 60d9a39700a91c04f988743f04c56f61, type: 3}
+  m_PrefabInstance: {fileID: 1419229647}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516448742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760b61c597fa1d84389c2665a93fc664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowSword
 --- !u!1001 &1519325713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49060,7 +49071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de43ee4e0f98096488fc1bc8b2a0ec20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwordActivated
-  cogerArmas: {fileID: 0}
+  cogerArmas: {fileID: 1516448761}
   numeroArma: 0
 --- !u!1001 &2138874128
 PrefabInstance:
