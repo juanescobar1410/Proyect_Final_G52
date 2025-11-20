@@ -3,6 +3,13 @@ using UnityEngine.InputSystem;
 
 public class BookController : MonoBehaviour
 {
+    /// <summary>
+    /// Controla la interacción con cada libro del puzzle.
+    /// Detecta clics mediante raycast y verifica si el jugador
+    /// está lo suficientemente cerca para activarlo.
+    /// Al hacer clic válido, envía al barril una dirección de movimiento
+    /// (Norte, Sur, Oriente u Occidente) según lo asignado en el inspector.
+    /// </summary>
     public enum Direction { Norte, Sur, Oriente, Occidente }
     [Header("Configuración del Libro")]
     public Direction moveDirection;       // Se asigna en el inspector
