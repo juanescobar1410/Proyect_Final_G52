@@ -44,10 +44,14 @@ public class Boss : MonoBehaviour
     public AudioSource musica;
     public bool muerto;
 
+    //---Puerta Final---//
+    public PuertaFinal puertaFinal;
+
+
     void Start()
     {
         anim = GetComponent<Animator>();
-        target = GameObject.Find("Player");
+        target = GameObject.Find("ArissaPlayer");
     }
 
     // Update is called once per frame
@@ -65,6 +69,11 @@ public class Boss : MonoBehaviour
                 anim.SetTrigger("dead");
                 musica.enabled = false;
                 muerto = true;
+
+                if (puertaFinal != null)
+                {
+                    puertaFinal.DesbloquearPuerta();
+                }
             }
         }
     }
@@ -282,6 +291,7 @@ public class Boss : MonoBehaviour
         {
             fase = 2;
             tiempoRutina = 1;
+
         }
 
         comportamientoBoss();
@@ -291,4 +301,6 @@ public class Boss : MonoBehaviour
             LanzaFuego_Skill();
         }
     }
+
+
 }

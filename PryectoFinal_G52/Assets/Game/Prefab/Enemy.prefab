@@ -204,8 +204,8 @@ MonoBehaviour:
   HP_Min: 100
   muerto: 0
   atacando: 0
-  dropMoneda: {fileID: 0}
-  dropPocion: {fileID: 0}
+  dropMoneda: {fileID: 8969204041082267299, guid: b9a397bb4d8ae9d44aca47c5008db47c, type: 3}
+  dropPocion: {fileID: 6861527924970025625, guid: bb71cee24f827874ba4c7779dfbaab16, type: 3}
   probMoneda: 0.5
   probPocion: 0.16
 --- !u!143 &2878071990299367671
