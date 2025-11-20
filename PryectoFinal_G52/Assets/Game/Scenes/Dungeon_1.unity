@@ -1672,7 +1672,7 @@ PrefabInstance:
       addedObject: {fileID: 895848009}
     - targetCorrespondingSourceObject: {fileID: 5721723476799238222, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 895848008}
+      addedObject: {fileID: 895848010}
   m_SourcePrefab: {fileID: 100100000, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
 --- !u!4 &29525560 stripped
 Transform:
@@ -43231,18 +43231,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5721723476799238222, guid: 4adae8232505e0e45b64cc3b61e9d9e1, type: 3}
   m_PrefabInstance: {fileID: 29525559}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &895848008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 895848004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7163fb808f6ff144ea489edcf93449bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DoorTrigger
 --- !u!65 &895848009
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43264,6 +43252,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6388183, y: 3.2974682, z: 0.6823918}
   m_Center: {x: -0.65795034, y: 1.647625, z: -0.109758705}
+--- !u!114 &895848010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895848004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29ed09bab72be14baa099b8b267accb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeSceneOnCollision
+  sceneName: Dungeon_3
 --- !u!1001 &896736398
 PrefabInstance:
   m_ObjectHideFlags: 0
