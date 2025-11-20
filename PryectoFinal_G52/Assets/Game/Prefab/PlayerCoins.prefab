@@ -266,3 +266,4 @@ MonoBehaviour:
   tipo: 1
   healAmount: 30
   coinAmount: 1
+  coinValue: 10

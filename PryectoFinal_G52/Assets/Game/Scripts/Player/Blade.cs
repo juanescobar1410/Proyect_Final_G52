@@ -22,7 +22,7 @@ public class SwordHitbox : MonoBehaviour
 
         if (coll.CompareTag("Boss"))
         {
-            coll.GetComponent<Boss>().Hp_min -= 100;
+            coll.GetComponent<Boss>().Hp_min -= 500;
         }
 
     }

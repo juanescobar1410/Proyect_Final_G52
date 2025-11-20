@@ -68,7 +68,7 @@ public class PuertaFinal : MonoBehaviour
     {
         Debug.Log("¡Has ganado!");
 
-        GameManager.Instance.SaveMetricsToJSON();
+        GameManager.Instance.GuardarMetricas();
 
         // Mostrar panel de victoria con estadísticas
         if (uiManager != null)

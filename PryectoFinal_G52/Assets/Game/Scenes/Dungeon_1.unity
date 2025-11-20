@@ -31164,8 +31164,6 @@ MonoBehaviour:
   target: {fileID: 1516448750}
   offset: {x: 0, y: 3, z: -6}
   smoothSpeed: 0.125
-  minDistance: 1
-  collisionPadding: 0.2
 --- !u!4 &643061420 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8145663221521284628, guid: 3d1cd730cbc340249ba285219c19727e, type: 3}
@@ -55888,7 +55886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -460, y: 163.7}
+  m_AnchoredPosition: {x: -460, y: 168}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1158956846
@@ -55911,7 +55909,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 4c199b58d3fddd747ba0a43b2c601be5, type: 3}
+  m_Texture: {fileID: 2800000, guid: b0cb5fe5be68b944da87e43c68803bed, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

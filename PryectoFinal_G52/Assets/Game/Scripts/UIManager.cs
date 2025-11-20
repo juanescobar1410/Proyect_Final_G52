@@ -1,32 +1,30 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro; // Si usas TextMeshPro
-
-/// <summary>
-/// Administra toda la interfaz del juego. Actualiza en pantalla el puntaje y el tiempo
-/// durante la partida, llevando también el tiempo de la escena. Al ganar, pausa el juego,
-/// muestra el panel de victoria y presenta las estadísticas finales (puntaje total,
-/// tiempo acumulado e ítems recolectados). Incluye formato de tiempo en MM:SS y un método
-/// público para activar la pantalla de victoria desde otros scripts.
-/// </summary>
 
 public class UIManager : MonoBehaviour
 {
     [Header("UI en Juego")]
+    public Text scoreText; // Si usas UI Text normal
     public TextMeshProUGUI scoreTextTMP; // Si usas TextMeshPro
+    public Text tiempoText;
     public TextMeshProUGUI tiempoTextTMP;
 
     [Header("Panel de Victoria")]
     public GameObject panelVictoria;
+    public Text scoreFinalText;
     public TextMeshProUGUI scoreFinalTextTMP;
+    public Text tiempoFinalText;
     public TextMeshProUGUI tiempoFinalTextTMP;
+    public Text itemsFinalText;
     public TextMeshProUGUI itemsFinalTextTMP;
 
     private float tiempoEscena = 0f;
+    private bool juegoTerminado = false;
 
     void Start()
     {
-        // Asegurarse de que el panel de victoria esté oculto
+        // Asegurarse de que el panel de victoria estÃ© oculto
         if (panelVictoria != null)
         {
             panelVictoria.SetActive(false);
@@ -35,14 +33,17 @@ public class UIManager : MonoBehaviour
         // Actualizar UI inicial
         ActualizarScore();
         ActualizarTiempo();
+        juegoTerminado = false;
     }
 
     void Update()
     {
-        // Contar tiempo de la escena actual
-        tiempoEscena += Time.deltaTime;
-        ActualizarScore();
-        ActualizarTiempo();
+        // Solo contar tiempo si el juego no ha terminado
+        if (juegoTerminado != true)
+        {
+            tiempoEscena += Time.deltaTime;
+            ActualizarTiempo();
+        }
     }
 
     public void ActualizarScore()
@@ -50,6 +51,10 @@ public class UIManager : MonoBehaviour
         if (GameManager.Instance != null)
         {
             int score = GameManager.Instance.Score;
+
+            // Actualizar texto normal
+            if (scoreText != null)
+                scoreText.text = "Score: " + score;
 
             // Actualizar TextMeshPro
             if (scoreTextTMP != null)
@@ -64,6 +69,10 @@ public class UIManager : MonoBehaviour
             float tiempoTotal = GameManager.Instance.GlobalTime + tiempoEscena;
             string tiempoFormateado = FormatearTiempo(tiempoTotal);
 
+            // Actualizar texto normal
+            if (tiempoText != null)
+                tiempoText.text = "Tiempo: " + tiempoFormateado;
+
             // Actualizar TextMeshPro
             if (tiempoTextTMP != null)
                 tiempoTextTMP.text = "Tiempo: " + tiempoFormateado;
@@ -74,21 +83,26 @@ public class UIManager : MonoBehaviour
     {
         if (panelVictoria == null) return;
 
-        // Pausar el juego
-        Time.timeScale = 0f;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
+        juegoTerminado = true;
 
-        // Guardar el tiempo de esta escena en el GameManager
+        // Guardar tiempo de la escena
         if (GameManager.Instance != null)
         {
             GameManager.Instance.AddTime(tiempoEscena);
         }
 
+        // ðŸ”¥ FIX PARA EVITAR QUE EL TIEMPO SIGA SUMANDOSE EN LA UI
+        tiempoEscena = 0f;
+
+        // Pausar el juego
+        Time.timeScale = 0f;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         // Mostrar panel
         panelVictoria.SetActive(true);
 
-        // Actualizar estadísticas finales
+        // Actualizar estadÃ­sticas finales
         ActualizarEstadisticasFinales();
     }
 
@@ -98,19 +112,23 @@ public class UIManager : MonoBehaviour
 
         // Score final
         int scoreFinal = GameManager.Instance.Score;
+        if (scoreFinalText != null)
+            scoreFinalText.text = "Score Total: " + scoreFinal;
         if (scoreFinalTextTMP != null)
             scoreFinalTextTMP.text = "Score Total: " + scoreFinal;
 
         // Tiempo final
         float tiempoFinal = GameManager.Instance.GlobalTime;
         string tiempoFormateado = FormatearTiempo(tiempoFinal);
-
+        if (tiempoFinalText != null)
+            tiempoFinalText.text = "Tiempo Total: " + tiempoFormateado;
         if (tiempoFinalTextTMP != null)
             tiempoFinalTextTMP.text = "Tiempo Total: " + tiempoFormateado;
 
         // Items recolectados
         int itemsTotal = GameManager.Instance.ItemsCount;
-
+        if (itemsFinalText != null)
+            itemsFinalText.text = "Items: " + itemsTotal;
         if (itemsFinalTextTMP != null)
             itemsFinalTextTMP.text = "Items: " + itemsTotal;
 
@@ -124,7 +142,7 @@ public class UIManager : MonoBehaviour
         return string.Format("{0:00}:{1:00}", minutos, segundos);
     }
 
-    // Método público para llamar desde otros scripts
+    // MÃ©todo pÃºblico para llamar desde otros scripts
     public void GameOver()
     {
         MostrarPanelVictoria();
