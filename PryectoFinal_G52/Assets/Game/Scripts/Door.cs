@@ -2,14 +2,25 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is create
-    public int keys;
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private string llaveRequerida = "llave1";
+    private ControllerScene1 controllerScene;
+
+    void Start()
     {
-        if (keys >= 1)
+        controllerScene = FindFirstObjectByType<ControllerScene1>();
+    }
+
+    public void Interactuar()
+    {
+        // Verifica si el jugador tiene la llave
+        if (controllerScene.TieneLlave(llaveRequerida))
         {
-            Destroy(gameObject, 0.2f);
-        } 
+            Debug.Log("Puerta abierta con llave: " + llaveRequerida);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("Necesitas la llave: " + llaveRequerida);
+        }
     }
 }

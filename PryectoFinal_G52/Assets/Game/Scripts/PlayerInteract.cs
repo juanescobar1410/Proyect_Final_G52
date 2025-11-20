@@ -3,18 +3,13 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
 
-    // Update is called once per frame
-    
-    
-        [SerializeField] private Transform playerCameraTransform;
-        [SerializeField] private LayerMask pickUpLayerMask;
-        
+    [SerializeField] private Transform playerCameraTransform;
+    [SerializeField] private LayerMask pickUpLayerMask;
+    [SerializeField] private LayerMask doorLayerMask; // Nueva layer para puertas
 
     private void Update()
     {
@@ -33,7 +28,20 @@ public class PlayerInteract : MonoBehaviour
                 if (raycastHit.transform.TryGetComponent(out ObjetoRecolecionable objetoRecoleccionable))
                 {
                     Debug.Log(objetoRecoleccionable);
-                   
+                    objetoRecoleccionable.Recolectar();
+                }
+            }
+
+            // Intenta raycast para puertas
+            if (Physics.Raycast(playerCameraTransform.position,
+                               playerCameraTransform.forward,
+                               out RaycastHit doorHit,
+                               interactRange,
+                               doorLayerMask))
+            {
+                if (doorHit.transform.TryGetComponent(out Door door))
+                {
+                    door.Interactuar();
                 }
             }
 
@@ -62,7 +70,6 @@ public class PlayerInteract : MonoBehaviour
                 npcInteractableList.Add(npcInteractable);
             }
         }
-
         NPCInteractable closestNPCInteractable = null;
         foreach (NPCInteractable npcInteractable in npcInteractableList)
         {
@@ -72,14 +79,13 @@ public class PlayerInteract : MonoBehaviour
             }
             else
             {
-                if (Vector3.Distance(transform.position, npcInteractable.transform.position)<
-                    Vector3.Distance(transform.position, closestNPCInteractable.transform.position)) {
-                    // Closer
+                if (Vector3.Distance(transform.position, npcInteractable.transform.position) <
+                    Vector3.Distance(transform.position, closestNPCInteractable.transform.position))
+                {
                     closestNPCInteractable = npcInteractable;
                 }
             }
         }
-
         return closestNPCInteractable;
     }
 }

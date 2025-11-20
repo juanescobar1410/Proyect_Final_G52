@@ -27,7 +27,7 @@ public class ChatBubble3D : MonoBehaviour
         textMeshPro.SetText(text);
         textMeshPro.ForceMeshUpdate();
         Vector2 textSize = textMeshPro.GetRenderedValues(false);
-        Vector2 padding = new Vector2(7f, 3f);
+        Vector2 padding = new Vector2(3f, 1f);
 
         backgroundSpriteRenderer.size = textSize + padding;
 
@@ -38,4 +38,7 @@ public class ChatBubble3D : MonoBehaviour
         // Auto destruir después de 6 segundos
         Destroy(gameObject, 6f);
     }
+
+
 }
+

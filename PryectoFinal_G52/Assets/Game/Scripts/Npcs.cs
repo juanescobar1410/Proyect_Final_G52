@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class Npcs : MonoBehaviour
@@ -9,8 +9,11 @@ public class Npcs : MonoBehaviour
     Transform Objetivo;
     public float Distancia;
 
+    private Animation anim; // COMPONENTE ANIMATION
+
     void Start()
     {
+        anim = GetComponent<Animation>(); // OBTENER ANIMATION
         Objetivo = Objetivos[Random.Range(0, Objetivos.Length)];
     }
 
@@ -25,5 +28,18 @@ public class Npcs : MonoBehaviour
 
         AI.destination = Objetivo.position;
         AI.speed = Velocidad;
+
+        // CONTROLAR ANIMACIÓN SEGÚN VELOCIDAD
+        if (anim != null)
+        {
+            // Si el agente se está moviendo, reproducir animación de caminar
+            if (AI.velocity.magnitude > 0.1f)
+            {
+                if (!anim.IsPlaying("Walking")) // Nombre de tu animación de caminar
+                {
+                    anim.CrossFade("Walking", 0.2f);
+                }
+            }
+        }
     }
 }
