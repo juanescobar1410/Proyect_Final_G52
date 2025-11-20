@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Game/Scenes/Pueblo_Inicial.unity
     guid: 31c77f67ec2c4fd4e8482f5e27637f1f
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Game/Scenes/Dungeon_1.unity
     guid: 52b1751056bba124494694ce01cd8e5f
   - enabled: 0
+=======
+>>>>>>> Catalina
     path: Assets/Game/Scenes/Dungeon_2.unity
     guid: 30b14724a3e6ac448ab9392f477b88aa
+  - enabled: 1
+    path: Assets/Game/Scenes/Dungeon_1.unity
+    guid: 52b1751056bba124494694ce01cd8e5f
   - enabled: 1
     path: Assets/Game/Scenes/Dungeon_3.unity
     guid: a5454fbd5c384464bb0d1a20fe79132f
