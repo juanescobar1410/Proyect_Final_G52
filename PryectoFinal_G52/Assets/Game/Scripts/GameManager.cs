@@ -1,9 +1,10 @@
+﻿using System.IO;
 using UnityEngine;
 
 /// <summary>
-/// Administra las variables globales del juego mediante un patr�n Singleton.
+/// Administra las variables globales del juego mediante un patrón Singleton.
 /// Lleva el registro del tiempo total, el puntaje acumulado y la cantidad de
-/// �tems obtenidos, permitiendo sumarlos desde cualquier escena o script.
+/// ítems obtenidos, permitiendo sumarlos desde cualquier escena o script.
 /// </summary>
 
 
@@ -47,4 +48,31 @@ public class GameManager : MonoBehaviour
     {
         itemsCount++;
     }
+
+    public void SaveMetricsToJSON()
+    {
+        PlayerMetrics data = new PlayerMetrics()
+        {
+            score = this.score,
+            items = this.itemsCount,
+            time = this.globalTime,
+            date = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+        };
+
+        string json = JsonUtility.ToJson(data, true);
+        string path = Application.persistentDataPath + "/player_metrics.json";
+
+        File.WriteAllText(path, json);
+
+        Debug.Log("📁 JSON guardado en: " + path);
+    }
+}
+
+[System.Serializable]
+public class PlayerMetrics
+{
+    public int score;
+    public int items;
+    public float time;
+    public string date;
 }
