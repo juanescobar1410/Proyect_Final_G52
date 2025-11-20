@@ -3,6 +3,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System;
+using Random = UnityEngine.Random;
 
 public class Boss : MonoBehaviour
 {
@@ -47,6 +49,14 @@ public class Boss : MonoBehaviour
     //---Puerta Final---//
     public PuertaFinal puertaFinal;
 
+    [Header("DROPS")]
+    public GameObject dropMoneda;
+    public GameObject dropPocion; // Opcional: pociones especiales
+    [Range(5, 20)] public int cantidadMonedasMin = 8; // Mínimo de monedas
+    [Range(10, 30)] public int cantidadMonedasMax = 15; // Máximo de monedas
+    [Range(0f, 1f)] public float probPocion = 0.3f; // Probabilidad de poción
+    [Range(1f, 5f)] public float fuerzaExplosion = 2f; // Fuerza del drop
+
 
     void Start()
     {
@@ -74,6 +84,10 @@ public class Boss : MonoBehaviour
                 {
                     puertaFinal.DesbloquearPuerta();
                 }
+
+                DropLoot();
+
+                Destroy(gameObject, 5f);
             }
         }
     }
@@ -302,5 +316,79 @@ public class Boss : MonoBehaviour
         }
     }
 
+    public void DropLoot()
+    {
+        if (dropMoneda == null)
+        {
+            Debug.LogWarning("No hay prefab de moneda asignado");
+            return;
+        }
+
+        // Posición base para los drops (un poco arriba del boss)
+        Vector3 posicionBase = transform.position + Vector3.up * 1.5f;
+
+        // Cantidad aleatoria de monedas
+        int cantidadMonedas = Random.Range(cantidadMonedasMin, cantidadMonedasMax + 1);
+
+        // Crear monedas con efecto de explosión
+        for (int i = 0; i < cantidadMonedas; i++)
+        {
+            // Instanciar moneda
+            GameObject moneda = Instantiate(dropMoneda, posicionBase, Quaternion.identity);
+
+            // Agregar Rigidbody si no tiene para el efecto de explosión
+            Rigidbody rb = moneda.GetComponent<Rigidbody>();
+            if (rb == null)
+            {
+                rb = moneda.AddComponent<Rigidbody>();
+            }
+
+            // Aplicar fuerza aleatoria en todas direcciones
+            Vector3 direccionAleatoria = new Vector3(
+                Random.Range(-1f, 1f),
+                Random.Range(0.5f, 1f), // Más fuerza hacia arriba
+                Random.Range(-1f, 1f)
+            ).normalized;
+
+            rb.AddForce(direccionAleatoria * fuerzaExplosion, ForceMode.Impulse);
+
+            // Agregar rotación aleatoria
+            rb.AddTorque(Random.insideUnitSphere * 2f, ForceMode.Impulse);
+
+            // Opcional: Destruir el Rigidbody después de 2 segundos para que no se mueva más
+            StartCoroutine(DesactivarFisicaMoneda(rb, 2f));
+        }
+
+        // Opcional: Drop de poción especial
+        if (dropPocion != null && Random.value <= probPocion)
+        {
+            Vector3 posicionPocion = posicionBase + Vector3.up * 0.5f;
+            GameObject pocion = Instantiate(dropPocion, posicionPocion, Quaternion.identity);
+
+            // Efecto especial para la poción
+            Rigidbody rbPocion = pocion.GetComponent<Rigidbody>();
+            if (rbPocion == null)
+            {
+                rbPocion = pocion.AddComponent<Rigidbody>();
+            }
+            rbPocion.AddForce(Vector3.up * fuerzaExplosion * 1.5f, ForceMode.Impulse);
+
+            StartCoroutine(DesactivarFisicaMoneda(rbPocion, 2f));
+        }
+
+        Debug.Log($"Boss soltó {cantidadMonedas} monedas!");
+    }
+
+    // Corrutina para desactivar la física después de un tiempo
+    IEnumerator DesactivarFisicaMoneda(Rigidbody rb, float tiempo)
+    {
+        yield return new WaitForSeconds(tiempo);
+
+        if (rb != null)
+        {
+            rb.isKinematic = true; // Detener movimiento
+            rb.useGravity = false;
+        }
+    }
 
 }

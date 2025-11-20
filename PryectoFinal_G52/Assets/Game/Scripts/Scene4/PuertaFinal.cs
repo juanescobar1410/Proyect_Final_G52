@@ -17,13 +17,15 @@ public class PuertaFinal : MonoBehaviour
 
     private bool playerCerca = false;
     private Renderer puertaRenderer;
+    public UIManager uiManager;
 
+    [System.Obsolete]
     void Start()
     {
         // Asegurarse de que el panel esté oculto al inicio
-        if (panelVictoria != null)
+        if (uiManager == null)
         {
-            panelVictoria.SetActive(false);
+            uiManager = FindObjectOfType<UIManager>();
         }
 
 
@@ -59,13 +61,14 @@ public class PuertaFinal : MonoBehaviour
     {
         Debug.Log("¡Has ganado!");
 
-        // Mostrar panel de victoria
-        if (panelVictoria != null)
+        // Mostrar panel de victoria con estadísticas
+        if (uiManager != null)
         {
-            panelVictoria.SetActive(true);
-            Time.timeScale = 0f; // Pausar el juego
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            uiManager.MostrarPanelVictoria();
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró el UIManager");
         }
     }
 

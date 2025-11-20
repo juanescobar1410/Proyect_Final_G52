@@ -148,5 +148,5 @@ public class SceneController : MonoBehaviour
         totalTimeText.text = GameManager.Instance.GlobalTime.ToString("0.00") + " s";
         totalScoreText.text = GameManager.Instance.Score.ToString();
     }
->>>>>>> Catalina
+
 }
