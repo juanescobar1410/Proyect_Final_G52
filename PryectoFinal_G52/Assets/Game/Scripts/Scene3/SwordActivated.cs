@@ -1,31 +1,21 @@
 using UnityEngine;
-using System.Collections;   
-using System.Collections.Generic;
-using System.Xml.Serialization;
 
+/// <summary>
+/// Activa un arma específica cuando el jugador entra en el trigger
+/// y destruye el objeto que contiene este script.
+/// </summary>
 public class SwordActivated : MonoBehaviour
 {
     public ShowSword cogerArmas;
     public int numeroArma;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        cogerArmas = GameObject.FindGameObjectWithTag("Player").GetComponent<ShowSword>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag== "Player")
+        if (other.CompareTag("Player"))
         {
             cogerArmas.ActivarArmar(numeroArma);
             Destroy(gameObject);
         }
     }
-
 }

@@ -2,6 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controla el comportamiento completo del enemigo:
+/// - Patrulla y se mueve aleatoriamente cuando está lejos del jugador.
+/// - Persigue y ataca al jugador cuando está cerca.
+/// - Recibe daño y puede morir.
+/// - Al morir reproduce animación, desactiva su collider y suelta drops
+///   como monedas o pociones con probabilidades configurables.
+/// - Usa CharacterController para manejar movimiento.
+/// </summary>
 public class Enemigo1 : MonoBehaviour
 {
     public int rutina;

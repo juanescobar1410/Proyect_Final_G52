@@ -1,4 +1,9 @@
 using UnityEngine;
+/// <summary>
+/// Controla qué arma se muestra en el jugador.
+/// - Recibe un número y activa únicamente esa arma del arreglo.
+/// - Asegura que solo un arma esté activa a la vez.
+/// </summary>
 
 public class ShowSword : MonoBehaviour
 {

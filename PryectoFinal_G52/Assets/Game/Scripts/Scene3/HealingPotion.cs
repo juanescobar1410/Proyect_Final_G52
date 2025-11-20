@@ -1,16 +1,24 @@
 using UnityEngine;
 
+/// <summary>
+/// Maneja el comportamiento de los objetos coleccionables:
+/// - Puede ser una cura o una moneda.
+/// - Al entrar en contacto con el jugador:
+///   - Cura suma vida hasta el máximo permitido.
+///   - Moneda aumenta el total de monedas del jugador.
+/// - Después de aplicar su efecto, el objeto se destruye.
+/// </summary>
 public class Collectables : MonoBehaviour
 {
     public enum TipoObjeto { Cura, Moneda }
     public TipoObjeto tipo;
 
-    public int healAmount = 30;   // Cantidad de vida que cura
-    public int coinAmount = 1;    // Cantidad de monedas que da
+    public int healAmount = 30;   
+    public int coinAmount = 1;   
 
     private void OnTriggerEnter(Collider other)
     {
-        // Buscar el script del jugador
+
         PlayerAttack player = other.GetComponent<PlayerAttack>();
 
         if (player != null)
@@ -28,7 +36,7 @@ public class Collectables : MonoBehaviour
                     break;
             }
 
-            Destroy(gameObject); // Se elimina el objeto recogido
+            Destroy(gameObject);
         }
     }
 }
