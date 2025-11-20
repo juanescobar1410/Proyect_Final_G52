@@ -1,6 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>
+/// Gestiona el movimiento del jugador usando CharacterController y el nuevo Input System.
+/// Incluye rotación, salto, gravedad, detección de suelo por dos métodos,
+/// y actualización opcional del Animator con parámetros suavizados.
+/// Proporciona herramientas de debug como logs y gizmos para visualizar colisiones.
+/// </summary>
+
+
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovementDebug : MonoBehaviour
 {

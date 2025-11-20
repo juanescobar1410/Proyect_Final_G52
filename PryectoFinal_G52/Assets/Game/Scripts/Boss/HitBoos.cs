@@ -1,5 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// Gestiona el daño que el jefe inflige al jugador. Cuando el collider del ataque
+/// detecta al jugador, reduce su vida aplicando la cantidad de daño configurada.
+/// </summary>
+
+
 public class HitBoos : MonoBehaviour
 {
     public int damage;

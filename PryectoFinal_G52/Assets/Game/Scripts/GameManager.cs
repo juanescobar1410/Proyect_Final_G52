@@ -1,5 +1,12 @@
 using UnityEngine;
 
+/// <summary>
+/// Administra las variables globales del juego mediante un patrón Singleton.
+/// Lleva el registro del tiempo total, el puntaje acumulado y la cantidad de
+/// ítems obtenidos, permitiendo sumarlos desde cualquier escena o script.
+/// </summary>
+
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;

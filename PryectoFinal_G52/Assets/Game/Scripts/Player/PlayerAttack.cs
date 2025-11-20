@@ -3,6 +3,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controla los ataques, vida, daño recibido y muerte del jugador.
+/// Gestiona la activación de la hitbox del arma, actualización de la barra de vida,
+/// y el respawn tras morir.
+/// </summary>
+
+
 public class PlayerAttack : MonoBehaviour
 {
     [Header("Ataque")]

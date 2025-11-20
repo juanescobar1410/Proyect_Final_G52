@@ -1,5 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// Gestiona las colisiones del arma del jugador.
+/// Aplica daño a enemigos y al Boss, y destruye paredes falsas al golpearlas.
+/// </summary>
+
+
 public class SwordHitbox : MonoBehaviour
 {
     void OnTriggerEnter(Collider coll)

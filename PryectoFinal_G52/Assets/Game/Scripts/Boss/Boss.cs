@@ -6,6 +6,15 @@ using UnityEngine.UI;
 using System;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Controla todo el comportamiento del jefe final. Gestiona sus rutinas de movimiento,
+/// ataques (melee, fuego continuo, fireballs y salto), el cambio de fase según su vida
+/// y la IA para perseguir y enfrentar al jugador. Administra la barra de vida, animaciones,
+/// muerte del jefe, desbloqueo de la puerta final y el sistema de recompensas (monedas y
+/// pociones) con efectos físicos. Incluye uso de pools para proyectiles y manejo de
+/// colisionadores durante ataques.
+/// </summary>
+
 public class Boss : MonoBehaviour
 {
     // Codigo enemigo base

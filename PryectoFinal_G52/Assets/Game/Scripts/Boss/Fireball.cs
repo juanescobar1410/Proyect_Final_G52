@@ -1,5 +1,12 @@
 using UnityEngine;
 
+/// <summary>
+/// Controla la fireball del jefe: avanza hacia adelante, aumenta su tamaño
+/// progresivamente y se desactiva al pasar 1 segundo, reiniciando su escala
+/// para poder reutilizarse.
+/// </summary>
+
+
 public class Fireball : MonoBehaviour
 {
     private float cronometro;

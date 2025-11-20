@@ -1,6 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controla la escena del jefe final. Detecta el inicio de la pelea, el cambio a la Fase 2
+/// y la derrota del Boss. Gestiona la música, el desbloqueo de la puerta final y el
+/// spawneo de enemigos adicionales durante la segunda fase. También permite reiniciar
+/// el estado de la escena para otros sistemas.
+/// </summary>
+
+
 public class ControllerSceneBoss : MonoBehaviour
 {
     [Header("Referencias principales")]

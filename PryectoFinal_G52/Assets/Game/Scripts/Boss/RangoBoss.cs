@@ -1,5 +1,12 @@
 using UnityEngine;
 
+/// <summary>
+/// Detecta cuando el jugador entra en el rango del jefe y selecciona aleatoriamente
+/// un ataque cuerpo a cuerpo o habilidad según la fase del Boss. Configura la animación,
+/// el tipo de golpe a ejecutar y activa el estado de ataque deshabilitando el collider.
+/// </summary>
+
+
 public class RangoBoss : MonoBehaviour
 {
     public Animator ani;

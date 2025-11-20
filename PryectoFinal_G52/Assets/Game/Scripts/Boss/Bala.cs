@@ -1,5 +1,11 @@
 using UnityEngine;
 
+/// <summary>
+/// Controla el comportamiento de una bala: avanza constantemente hacia adelante
+/// y se desactiva automáticamente después de 3 segundos para reutilizarse.
+/// </summary>
+
+
 public class Bala : MonoBehaviour
 {
     public float cronometro;
