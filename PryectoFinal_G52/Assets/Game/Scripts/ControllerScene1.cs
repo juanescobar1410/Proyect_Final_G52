@@ -2,6 +2,11 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+/// <summary>
+/// Administra el progreso de la escena.
+/// Lleva el conteo de objetos recolectados, gestiona las llaves obtenidas,
+/// actualiza la UI y permite cambiar de escena cuando el jugador llega al punto indicado.
+/// </summary>
 
 public class ControllerScene1 : MonoBehaviour
 {
